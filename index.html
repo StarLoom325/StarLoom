@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Star Loom | Official Website</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #070b13;
+            color: white;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(7, 11, 19, 0.92);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid #202b3d;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #6da7ff;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #c7d1e1;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #6da7ff;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 20px 80px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 25%,
+                    #1a3d6b,
+                    #0b1424 38%,
+                    #070b13 75%
+                );
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 7px 18px;
+
+            border-radius: 30px;
+
+            border: 1px solid #31598e;
+
+            background: rgba(30, 70, 120, 0.25);
+
+            color: #8dbaff;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 105px);
+
+            letter-spacing: 8px;
+
+            margin-bottom: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    white,
+                    #66a5ff
+                );
+
+            background-clip: text;
+-webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero h2 {
+            color: #a1afc2;
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #8492a8;
+        }
+
+        .buttons {
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #4388ff;
+
+            color: white;
+        }
+
+        .primary:hover {
+            background: #65a0ff;
+
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            background: #101827;
+
+            border: 1px solid #33445e;
+
+            color: white;
+        }
+
+        .secondary:hover {
+            background: #18243a;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+            color: #8593a8;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products {
+            background: #090e17;
+        }
+
+        .cards {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+        .card {
+            padding: 30px;
+
+            background: #101722;
+
+            border: 1px solid #202d40;
+
+            border-radius: 18px;
+
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            border-color: #3f78bd;
+        }
+
+        .card-icon {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #8997ab;
+        }
+
+
+        /* =========================
+           LOOM ENGINE
+        ========================= */
+
+        .engine {
+            background:
+                radial-gradient(
+                    circle at center,
+                    #102747,
+                    #080d16 65%
+                );
+        }
+
+        .engine-box {
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 50px;
+
+            border-radius: 25px;
+
+            background: rgba(15, 24, 38, 0.95);
+
+            border: 1px solid #294365;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 70px
+                rgba(0, 0, 0, 0.35);
+        }
+
+        .engine-logo {
+            font-size: 46px;
+
+            font-weight: bold;
+
+            color: #69a5ff;
+
+            margin-bottom: 10px;
+        }
+
+        .version {
+            display: inline-block;
+
+            padding: 5px 15px;
+
+            border-radius: 20px;
+
+            background: #1a3150;
+
+            color: #8ebaff;
+
+            margin-bottom: 20px;
+        }
+
+        .engine-box p {
+            color: #98a7bb;
+
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            margin: 25px 0;
+
+            padding: 16px;
+
+            border-radius: 10px;
+
+            background: #2b2518;
+
+            border: 1px solid #66552d;
+
+            color: #e3c779;
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .feature-list {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 18px;
+        }
+
+        .feature {
+            padding: 22px;
+
+            border-radius: 14px;
+
+            background: #101722;
+
+            border: 1px solid #202d40;
+        }
+
+        .feature strong {
+            display: block;
+
+            color: #76adff;
+
+            margin-bottom: 5px;
+        }
+
+        .feature span {
+            color: #8997aa;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #070b13;
+        }
+
+        .about-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .about-box p {
+            color: #8e9bad;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 7%;
+
+            text-align: center;
+
+            background: #05080d;
+
+            border-top: 1px solid #1b2533;
+
+            color: #657286;
+        }
+
+        footer strong {
+            color: #6da7ff;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+
+                letter-spacing: 4px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
+            .engine-box {
+                padding: 30px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            STAR LOOM
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    خانه
+                </a>
+            </li>
+
+            <li>
+                <a href="#products">
+                    محصولات
+                </a>
+            </li>
+
+            <li>
+                <a href="#engine">
+                    Loom Engine
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    درباره ما
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-content">
+
+            <div class="badge">
+                STAR LOOM OFFICIAL
+            </div>
+
+            <h1>
+                STAR LOOM
+            </h1>
+
+            <h2>
+                Game • Software • Engine
+            </h2>
+
+            <p>
+                به وب‌سایت رسمی Star Loom خوش آمدید.
+                در این سایت بازی‌ها، نرم‌افزارها،
+                موتور بازی‌سازی و پروژه‌های Star Loom
+                منتشر خواهند شد.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="button primary"
+                    href="#engine"
+                >
+                    مشاهده Loom Engine
+                </a>
+
+                <a
+                    class="button secondary"
+                    href="#products"
+                >
+                    محصولات
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section
+        class="products"
+        id="products"
+    >
+
+        <h2 class="section-title">
+            محصولات Star Loom
+        </h2>
+
+        <p class="section-description">
+            بازی‌ها، نرم‌افزارها و ابزارهای
+            ساخته‌شده توسط Star Loom.
+        </p>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    بازی‌ها
+                </h3>
+
+                <p>
+                    بازی‌های ساخته‌شده توسط
+                    Star Loom در این بخش قرار می‌گیرند.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    ابزارها
+                </h3>
+
+                <p>
+                    ابزارهای کاربردی برای
+                    توسعه‌دهندگان و سازندگان.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💻
+                </div>
+
+                <h3>
+                    نرم‌افزارها
+                </h3>
+
+                <p>
+                    نرم‌افزارهای ساخته‌شده توسط
+                    Star Loom.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOOM ENGINE
+    ========================= -->
+
+    <section
+        class="engine"
+        id="engine"
+    >
+
+        <div class="engine-box">
+
+            <div class="engine-logo">
+                LOOM ENGINE
+            </div>
+
+            <div class="version">
+                Version 0.2
+            </div>
+
+            <p>
+                موتور بازی‌سازی Loom Engine
+                برای ساخت بازی‌های 2D و 3D.
+            </p>
+
+            <p>
+                نسخه‌های آینده امکانات بیشتری
+                برای توسعه‌دهندگان خواهند داشت.
+            </p>
+
+
+            <div class="warning">
+
+                ⚠️ هشدار نسخه آزمایشی
+
+                <br><br>
+
+                این نسخه کامل نیست و ممکن است
+                دارای خطا، باگ یا قابلیت‌های ناقص باشد.
+
+            </div>
+
+
+            <!-- =========================
+                 DOWNLOAD
+            ========================= -->
+
+            <div class="buttons">
+
+                <a
+                    class="button primary"
+                    href="downloads/LoomEngine_0.2.exe"
+                    download
+                >
+                    ⬇ دانلود Loom Engine 0.2
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            امکانات Loom Engine
+        </h2>
+
+        <p class="section-description">
+            امکانات فعلی و قابلیت‌هایی که
+            در مسیر توسعه موتور قرار دارند.
+        </p>
+
+
+        <div class="feature-list">
+
+
+            <div class="feature">
+
+                <strong>
+                    2D
+                </strong>
+
+                <span>
+                    ساخت بازی‌های دوبعدی
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    3D
+                </strong>
+
+                <span>
+                    ساخت بازی‌های سه‌بعدی
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Scene
+                </strong>
+
+                <span>
+                    ساخت و مدیریت صحنه
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Node
+                </strong>
+
+                <span>
+                    سیستم نود برای ساخت صحنه
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Runtime
+                </strong>
+
+                <span>
+                    اجرای پروژه‌های بازی
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Scripting
+                </strong>
+
+                <span>
+                    سیستم اسکریپت‌نویسی
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Camera
+                </strong>
+
+                <span>
+                    سیستم دوربین و دنبال‌کردن بازیکن
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Editor
+                </strong>
+
+                <span>
+                    محیط ویرایش پروژه
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section
+        class="about"
+        id="about"
+    >
+
+        <div class="about-box">
+
+            <h2 class="section-title">
+                درباره Star Loom
+            </h2>
+
+            <p>
+                Star Loom یک مجموعه توسعه نرم‌افزار
+                و بازی است که روی ساخت بازی‌ها،
+                ابزارها و موتور بازی‌سازی Loom Engine
+                کار می‌کند.
+            </p>
+
+            <p>
+                این وب‌سایت محل انتشار نسخه‌های
+                مختلف پروژه‌ها و محصولات Star Loom است.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <strong>
+            STAR LOOM
+        </strong>
+
+        <br>
+
+        © 2026 Star Loom
+
+        <br>
+
+        Game • Software • Engine
+
+    </footer>
+
+    <meta name="description"
+      content="Star Loom - بازی‌ها، برنامه‌ها و Loom Engine">
+
+<meta name="keywords"
+      content="Star Loom, Loom Engine, بازی سازی, موتور بازی سازی, بازی">
+
+<meta name="robots"
+      content="index, follow">
+
+<title>Star Loom | بازی‌ها، برنامه‌ها و Loom Engine</title>
+
+</body>
+
+</html>
