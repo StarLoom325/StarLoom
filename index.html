@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="google-site-verification" content="SzG9uXuwl9cz1PR138MmUOSuRbty3bSFNzscdlu3aqc" />
-          
+    <meta
+        name="google-site-verification"
+        content="SzG9uXuwl9cz1PR138MmUOSuRbty3bSFNzscdlu3aqc"
+    >
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Star Loom | Games, Software & Loom Engine</title>
 
@@ -20,9 +25,15 @@
         content="Star Loom, StarLoom, Loom Engine, game engine, games, software, game development"
     >
 
-    <meta name="author" content="Star Loom">
+    <meta
+        name="author"
+        content="Star Loom"
+    >
 
-    <meta name="robots" content="index, follow">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
     <link
         rel="canonical"
@@ -30,7 +41,11 @@
     >
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
+
+    <meta
+        property="og:type"
+        content="website"
+    >
 
     <meta
         property="og:title"
@@ -52,8 +67,12 @@
         content="Star Loom"
     >
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary">
+    <!-- Twitter -->
+
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
 
     <meta
         name="twitter:title"
@@ -66,9 +85,14 @@
     >
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
+
+    <link
+        rel="icon"
+        href="favicon.ico"
+    >
 
     <!-- Structured Data -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -79,7 +103,9 @@
     }
     </script>
 
+
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -97,230 +123,571 @@
             line-height: 1.6;
         }
 
+
+        /* HEADER */
+
         header {
             background: #111936;
             padding: 20px;
+
             position: sticky;
             top: 0;
+
             z-index: 1000;
+
             border-bottom: 1px solid #263052;
         }
+
 
         nav {
             max-width: 1100px;
             margin: auto;
+
             display: flex;
+
             justify-content: space-between;
             align-items: center;
+
             gap: 20px;
         }
+
 
         .logo {
             font-size: 24px;
             font-weight: bold;
+
             color: #7dd3fc;
         }
 
+
         nav ul {
             list-style: none;
+
             display: flex;
+
             gap: 20px;
+
             flex-wrap: wrap;
         }
 
+
         nav a {
             color: white;
+
             text-decoration: none;
+
+            transition: 0.2s;
         }
+
 
         nav a:hover {
             color: #7dd3fc;
         }
 
+
+        /* MAIN */
+
         main {
             max-width: 1100px;
+
             margin: auto;
         }
+
 
         section {
             padding: 80px 20px;
         }
 
+
+        /* HERO */
+
         .hero {
             min-height: 80vh;
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             text-align: center;
         }
 
+
         .hero h1 {
             font-size: clamp(45px, 8vw, 90px);
+
             margin-bottom: 20px;
         }
 
+
         .hero p {
             max-width: 700px;
+
             margin: auto;
+
             color: #cbd5e1;
+
             font-size: 20px;
         }
 
+
+        /* BUTTON */
+
         .button {
             display: inline-block;
+
             margin-top: 30px;
+
             padding: 14px 24px;
+
             border-radius: 10px;
+
             background: #2563eb;
+
             color: white;
+
             text-decoration: none;
+
             font-weight: bold;
+
+            transition: 0.2s;
         }
+
 
         .button:hover {
             background: #1d4ed8;
+
+            transform: translateY(-2px);
         }
+
+
+        /* TITLES */
 
         h2 {
             font-size: 36px;
+
             margin-bottom: 25px;
         }
 
+
+        /* GRID */
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(250px, 1fr)
+                );
+
             gap: 20px;
         }
 
+
+        /* CARD */
+
         .card {
             background: #121a35;
+
             border: 1px solid #263052;
+
             border-radius: 15px;
+
             padding: 25px;
         }
+
 
         .card h3 {
             margin-bottom: 10px;
         }
 
+
         .card p {
             color: #cbd5e1;
         }
 
+
+        /* VERSION */
+
+        .version {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 5px 10px;
+
+            border-radius: 6px;
+
+            background: #1e293b;
+
+            color: #7dd3fc;
+
+            font-size: 14px;
+        }
+
+
+        .download-info {
+            margin-top: 15px;
+
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+
+        .status {
+            margin-top: 12px;
+
+            color: #86efac;
+
+            font-size: 14px;
+        }
+
+
+        /* FOOTER */
+
         footer {
             text-align: center;
+
             padding: 40px 20px;
+
             background: #080c18;
+
             color: #94a3b8;
         }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+
+            nav ul {
+                justify-content: center;
+            }
+
+
+            section {
+                padding: 60px 15px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
+
     <nav>
-        <div class="logo">Star Loom</div>
+
+        <div class="logo">
+            Star Loom
+        </div>
+
 
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#games">Games</a></li>
-            <li><a href="#engine">Loom Engine</a></li>
-            <li><a href="#software">Software</a></li>
-            <li><a href="#about">About</a></li>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#games">
+                    Games
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#engine">
+                    Loom Engine
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#software">
+                    Software
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
         </ul>
+
     </nav>
+
 </header>
+
 
 <main>
 
-    <section id="home" class="hero">
-        <h1>Star Loom</h1>
 
-        <p>
-            Games, software and game development tools created by Star Loom.
-            Explore our projects and Loom Engine.
-        </p>
+<!-- HOME -->
 
-        <a class="button" href="#engine">
-            Explore Loom Engine
-        </a>
-    </section>
+<section id="home" class="hero">
 
-    <section id="games">
-        <h2>Games</h2>
+    <h1>
+        Star Loom
+    </h1>
 
-        <div class="grid">
-            <article class="card">
-                <h3>Star Loom Games</h3>
-                <p>
-                    Discover games and interactive projects developed by Star Loom.
-                </p>
-            </article>
 
-            <article class="card">
-                <h3>Game Projects</h3>
-                <p>
-                    Explore current and future game development projects.
-                </p>
-            </article>
-        </div>
-    </section>
+    <p>
+        Games, software and game development tools
+        created by Star Loom.
+    </p>
 
-    <section id="engine">
-        <h2>Loom Engine</h2>
 
-        <div class="grid">
-            <article class="card">
-                <h3>Loom Engine 0.2</h3>
+    <a
+        class="button"
+        href="#engine"
+    >
+        Explore Loom Engine
+    </a>
 
-                <p>
-                    An early version of the Loom Engine game development project.
-                </p>
+</section>
 
-                <a
-                    class="button"
-                    href="LoomEngine_0.2.exe"
-                    download
-                >
-                    ⬇ Download Loom Engine 0.2
-                </a>
 
-                <p style="margin-top:15px;">
-                    Note: This version is an early release and may contain
-                    bugs or unfinished features.
-                </p>
-            </article>
-        </div>
-    </section>
 
-    <section id="software">
-        <h2>Software</h2>
+<!-- GAMES -->
 
-        <div class="grid">
-            <article class="card">
-                <h3>Star Loom Software</h3>
-                <p>
-                    Software and development tools created by Star Loom.
-                </p>
-            </article>
-        </div>
-    </section>
+<section id="games">
 
-    <section id="about">
-        <h2>About Star Loom</h2>
+    <h2>
+        Games
+    </h2>
 
-        <p>
-            Star Loom is an independent game and software development project
-            focused on creating games, tools and the Loom Engine.
-        </p>
-    </section>
+
+    <div class="grid">
+
+
+        <article class="card">
+
+            <h3>
+                Star Loom Games
+            </h3>
+
+
+            <p>
+                Discover games and interactive projects
+                developed by Star Loom.
+            </p>
+
+        </article>
+
+
+
+        <article class="card">
+
+            <h3>
+                Game Projects
+            </h3>
+
+
+            <p>
+                Explore current and future game
+                development projects.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- LOOM ENGINE -->
+
+<section id="engine">
+
+    <h2>
+        Loom Engine
+    </h2>
+
+
+    <div class="grid">
+
+
+        <!-- LOOM ENGINE 1.6 -->
+
+        <article class="card">
+
+            <h3>
+                Loom Engine 1.6
+            </h3>
+
+
+            <span class="version">
+                v1.6
+            </span>
+
+
+            <p style="margin-top:15px;">
+
+                Loom Engine 1.6 is a game development
+                engine created by Star Loom.
+
+            </p>
+
+
+            <!-- DIRECT DOWNLOAD -->
+
+            <a
+                class="button"
+                href="https://github.com/hasanhesamramkani-jpg/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
+            >
+
+                ⬇ Download Loom Engine 1.6
+
+            </a>
+
+
+            <p class="download-info">
+
+                Windows • EXE • 45.5 MB • Free
+
+            </p>
+
+
+            <p class="status">
+
+                ✓ Official Star Loom Release
+
+            </p>
+
+        </article>
+
+
+
+        <!-- LOOM ENGINE 0.2 -->
+
+        <article class="card">
+
+            <h3>
+                Loom Engine 0.2
+            </h3>
+
+
+            <span class="version">
+                Archived
+            </span>
+
+
+            <p style="margin-top:15px;">
+
+                An earlier version of the Loom Engine
+                development project.
+
+            </p>
+
+
+            <p class="download-info">
+
+                This version has been replaced by
+                Loom Engine 1.6.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- SOFTWARE -->
+
+<section id="software">
+
+    <h2>
+        Software
+    </h2>
+
+
+    <div class="grid">
+
+
+        <article class="card">
+
+            <h3>
+                Star Loom Software
+            </h3>
+
+
+            <p>
+                Software and development tools
+                created by Star Loom.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2>
+        About Star Loom
+    </h2>
+
+
+    <p>
+
+        Star Loom is an independent game and software
+        development project focused on creating games,
+        tools and the Loom Engine.
+
+    </p>
+
+</section>
+
 
 </main>
 
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 Star Loom. All rights reserved.</p>
+
+    <p>
+        © 2026 Star Loom. All rights reserved.
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>
