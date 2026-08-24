@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
 
@@ -13,16 +13,16 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Star Loom | Games, Software & Loom Engine</title>
+    <title>Star Loom | استار لوم</title>
 
     <meta
         name="description"
-        content="Star Loom creates games, software and Loom Engine. Explore Star Loom projects, games and development tools."
+        content="Star Loom creates games, software and Loom Engine. استار لوم بازی‌ها، نرم‌افزار و موتور لوم را می‌سازد."
     >
 
     <meta
         name="keywords"
-        content="Star Loom, StarLoom, Loom Engine, game engine, games, software, game development"
+        content="Star Loom, StarLoom, Loom Engine, game engine, games, software, استار لوم, موتور بازی"
     >
 
     <meta name="author" content="Star Loom">
@@ -34,55 +34,21 @@
     >
 
     <!-- Open Graph -->
-
     <meta property="og:type" content="website">
-
-    <meta
-        property="og:title"
-        content="Star Loom | Games, Software & Loom Engine"
-    >
-
-    <meta
-        property="og:description"
-        content="Explore games, software and Loom Engine projects created by Star Loom."
-    >
-
-    <meta
-        property="og:url"
-        content="https://hasanhesamramkani-jpg.github.io/StarLoom/"
-    >
-
-    <meta
-        property="og:site_name"
-        content="Star Loom"
-    >
+    <meta property="og:title" content="Star Loom | استار لوم">
+    <meta property="og:description" content="Games, software and Loom Engine. بازی‌ها، نرم‌افزار و موتور لوم.">
+    <meta property="og:url" content="https://hasanhesamramkani-jpg.github.io/StarLoom/">
+    <meta property="og:site_name" content="Star Loom">
 
     <!-- Twitter / X -->
-
-    <meta
-        name="twitter:card"
-        content="summary"
-    >
-
-    <meta
-        name="twitter:title"
-        content="Star Loom | Games, Software & Loom Engine"
-    >
-
-    <meta
-        name="twitter:description"
-        content="Games, software and Loom Engine projects by Star Loom."
-    >
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Star Loom | استار لوم">
+    <meta name="twitter:description" content="Games, software and Loom Engine. بازی‌ها، نرم‌افزار و موتور لوم.">
 
     <!-- Favicon -->
-
-    <link
-        rel="icon"
-        href="favicon.ico"
-    >
+    <link rel="icon" href="favicon.ico">
 
     <!-- Structured Data -->
-
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -93,8 +59,24 @@
     }
     </script>
 
-
     <style>
+        :root {
+            --bg-dark: #0a0f1e;
+            --bg-card: #111a33;
+            --bg-header: #0d1428;
+            --border-color: #2a3560;
+            --text-primary: #ffffff;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent: #60a5fa;
+            --accent-hover: #3b82f6;
+            --button-primary: #2563eb;
+            --button-hover: #1d4ed8;
+            --success: #86efac;
+            --gradient-1: #60a5fa;
+            --gradient-2: #a78bfa;
+            --gradient-3: #34d399;
+        }
 
         * {
             box-sizing: border-box;
@@ -107,490 +89,534 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1020;
-            color: white;
-            line-height: 1.6;
+            font-family: 'Segoe UI', 'Tahoma', 'Iranian Sans', 'Vazirmatn', Arial, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(ellipse at 20% 20%, rgba(96, 165, 250, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(167, 139, 250, 0.05) 0%, transparent 50%);
+            transition: all 0.3s ease;
         }
 
         header {
-            background: #111936;
-            padding: 20px;
-
+            background: rgba(13, 20, 40, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 18px 20px;
             position: sticky;
             top: 0;
-
             z-index: 1000;
-
-            border-bottom: 1px solid #263052;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
         nav {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
+        }
 
+        .nav-left {
+            display: flex;
+            align-items: center;
             gap: 20px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #7dd3fc;
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+        }
+
+        .lang-toggle {
+            background: rgba(96, 165, 250, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(96, 165, 250, 0.25);
+            border-color: rgba(96, 165, 250, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
         }
 
         nav ul {
             list-style: none;
-
             display: flex;
-            gap: 20px;
-
+            gap: 25px;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
+            color: var(--text-secondary);
             text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding: 5px 0;
+            font-size: 15px;
+            font-weight: 500;
+        }
 
-            transition: 0.2s;
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
         }
 
         nav a:hover {
-            color: #7dd3fc;
+            color: var(--accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         main {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
         }
 
         section {
-            padding: 80px 20px;
+            padding: 90px 20px;
+            position: relative;
         }
 
         .hero {
-            min-height: 80vh;
-
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-
             text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 90px);
-            margin-bottom: 20px;
+            font-size: clamp(50px, 9vw, 100px);
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.3));
         }
 
         .hero p {
             max-width: 700px;
             margin: auto;
-
-            color: #cbd5e1;
-
+            color: var(--text-secondary);
             font-size: 20px;
+            font-weight: 300;
         }
 
         .button {
             display: inline-block;
-
-            margin-top: 30px;
-
-            padding: 14px 24px;
-
-            border-radius: 10px;
-
-            background: #2563eb;
-
+            margin-top: 35px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--button-primary), #3b82f6);
             color: white;
-
             text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
 
-            font-weight: bold;
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
 
-            transition: 0.2s;
+        .button:hover::before {
+            left: 100%;
         }
 
         .button:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, var(--button-hover), #2563eb);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.6);
         }
 
         h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
+            font-size: 40px;
+            margin-bottom: 35px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            margin: 15px auto 0;
+            border-radius: 3px;
         }
 
         .grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(250px, 1fr)
-                );
-
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .card {
-            background: #121a35;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
-            border: 1px solid #263052;
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
-            border-radius: 15px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(96, 165, 250, 0.4);
+        }
 
-            padding: 25px;
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: var(--accent);
         }
 
         .card p {
-            color: #cbd5e1;
+            color: var(--text-secondary);
         }
 
         .version {
             display: inline-block;
-
-            margin-top: 10px;
-
-            padding: 5px 10px;
-
-            border-radius: 6px;
-
-            background: #1e293b;
-
-            color: #7dd3fc;
-
-            font-size: 14px;
+            margin-top: 15px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: rgba(96, 165, 250, 0.15);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(96, 165, 250, 0.3);
         }
 
         .download-info {
-            margin-top: 15px;
-
-            color: #94a3b8;
-
-            font-size: 14px;
+            margin-top: 18px;
+            color: var(--text-muted);
+            font-size: 13px;
         }
 
         .status {
-            margin-top: 12px;
-
-            color: #86efac;
-
+            margin-top: 15px;
+            color: var(--success);
             font-size: 14px;
+            font-weight: 500;
         }
 
         .old-version {
-            opacity: 0.75;
+            opacity: 0.6;
+        }
+
+        .old-version:hover {
+            opacity: 1;
         }
 
         footer {
             text-align: center;
+            padding: 50px 20px;
+            background: rgba(8, 12, 24, 0.9);
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
 
-            padding: 40px 20px;
+        /* برای حالت انگلیسی */
+        [dir="ltr"] .logo {
+            letter-spacing: -0.5px;
+        }
 
-            background: #080c18;
+        [dir="ltr"] body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-            color: #94a3b8;
+        [dir="ltr"] nav a::after {
+            right: auto;
+            left: 0;
         }
 
         @media (max-width: 700px) {
-
             nav {
                 flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-left {
+                width: 100%;
+                justify-content: space-between;
             }
 
             nav ul {
                 justify-content: center;
+                gap: 18px;
             }
 
             section {
                 padding: 60px 15px;
             }
 
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
 <header>
-
     <nav>
-
-        <div class="logo">
-            Star Loom
+        <div class="nav-left">
+            <div class="logo" data-en="⭐ Star Loom" data-fa="⭐ استار لوم">
+                ⭐ استار لوم
+            </div>
+            
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span class="lang-icon">🌐</span>
+                <span class="lang-text" data-en="فارسی" data-fa="English">English</span>
+            </button>
         </div>
 
         <ul>
-
-            <li>
-                <a href="#home">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="#games">
-                    Games
-                </a>
-            </li>
-
-            <li>
-                <a href="#engine">
-                    Loom Engine
-                </a>
-            </li>
-
-            <li>
-                <a href="#software">
-                    Software
-                </a>
-            </li>
-
-            <li>
-                <a href="#about">
-                    About
-                </a>
-            </li>
-
+            <li><a href="#home" data-en="Home" data-fa="خانه">خانه</a></li>
+            <li><a href="#games" data-en="Games" data-fa="بازی‌ها">بازی‌ها</a></li>
+            <li><a href="#engine" data-en="Loom Engine" data-fa="موتور لوم">موتور لوم</a></li>
+            <li><a href="#software" data-en="Software" data-fa="نرم‌افزار">نرم‌افزار</a></li>
+            <li><a href="#about" data-en="About" data-fa="درباره ما">درباره ما</a></li>
         </ul>
-
     </nav>
-
 </header>
 
-
 <main>
-
-
     <!-- HOME -->
-
     <section id="home" class="hero">
-
-        <h1>
-            Star Loom
-        </h1>
-
-        <p>
-            Games, software and game development tools
-            created by Star Loom.
+        <h1 data-en="Star Loom" data-fa="استار لوم">استار لوم</h1>
+        <p data-en="Games, software and game development tools created by Star Loom." 
+           data-fa="بازی‌ها، نرم‌افزار و ابزارهای توسعه بازی ساخته استار لوم">
+            بازی‌ها، نرم‌افزار و ابزارهای توسعه بازی ساخته استار لوم
         </p>
-
-        <a
-            class="button"
-            href="#engine"
-        >
-            Explore Loom Engine
+        <a class="button" href="#engine" data-en="Explore Loom Engine" data-fa="کاوش موتور لوم">
+            کاوش موتور لوم
         </a>
-
     </section>
-
 
     <!-- GAMES -->
-
     <section id="games">
-
-        <h2>
-            Games
-        </h2>
-
+        <h2 data-en="Games" data-fa="بازی‌ها">بازی‌ها</h2>
         <div class="grid">
-
             <article class="card">
-
-                <h3>
-                    Star Loom Games
-                </h3>
-
-                <p>
-                    Discover games and interactive projects
-                    developed by Star Loom.
+                <h3 data-en="Star Loom Games" data-fa="بازی‌های استار لوم">بازی‌های استار لوم</h3>
+                <p data-en="Discover games and interactive projects developed by Star Loom." 
+                   data-fa="بازی‌ها و پروژه‌های تعاملی ساخته استار لوم را کشف کنید.">
+                    بازی‌ها و پروژه‌های تعاملی ساخته استار لوم را کشف کنید.
                 </p>
-
             </article>
-
-
             <article class="card">
-
-                <h3>
-                    Game Projects
-                </h3>
-
-                <p>
-                    Explore current and future game
-                    development projects.
+                <h3 data-en="Game Projects" data-fa="پروژه‌های بازی">پروژه‌های بازی</h3>
+                <p data-en="Explore current and future game development projects." 
+                   data-fa="پروژه‌های فعلی و آینده توسعه بازی را کاوش کنید.">
+                    پروژه‌های فعلی و آینده توسعه بازی را کاوش کنید.
                 </p>
-
             </article>
-
         </div>
-
     </section>
-
 
     <!-- LOOM ENGINE -->
-
     <section id="engine">
-
-        <h2>
-            Loom Engine
-        </h2>
-
+        <h2 data-en="Loom Engine" data-fa="موتور لوم">موتور لوم</h2>
         <div class="grid">
-
-
             <!-- VERSION 1.6 -->
-
             <article class="card">
-
-                <h3>
-                    Loom Engine 1.6
-                </h3>
-
-                <span class="version">
-                    v1.6 • Latest
+                <h3 data-en="Loom Engine 1.6" data-fa="موتور لوم 1.6">موتور لوم 1.6</h3>
+                <span class="version" data-en="v1.6 • Latest" data-fa="نسخه 1.6 • جدیدترین">
+                    نسخه 1.6 • جدیدترین
                 </span>
-
-                <p style="margin-top:15px;">
-
-                    Loom Engine 1.6 is the latest version
-                    of the Loom Engine game development
-                    project created by Star Loom.
-
+                <p style="margin-top:20px;" 
+                   data-en="Loom Engine 1.6 is the latest version of the Loom Engine game development project created by Star Loom." 
+                   data-fa="موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.">
+                    موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.
                 </p>
-
-
-                <!-- DOWNLOAD 1.6 -->
-
-                <a
-                    class="button"
-                    href="https://github.com/hasanhesamramkani-jpg/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
-                >
-                    ⬇ Download Loom Engine 1.6
+                <a class="button" 
+                   href="https://github.com/hasanhesamramkani-jpg/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
+                   data-en="⬇ Download Loom Engine 1.6" 
+                   data-fa="⬇ دانلود موتور لوم 1.6">
+                    ⬇ دانلود موتور لوم 1.6
                 </a>
-
-
-                <p class="download-info">
-
-                    Windows • EXE • 45.5 MB • Free
-
+                <p class="download-info" data-en="Windows • EXE • 45.5 MB • Free" data-fa="ویندوز • EXE • 45.5 مگابایت • رایگان">
+                    ویندوز • EXE • 45.5 مگابایت • رایگان
                 </p>
-
-
-                <p class="status">
-
-                    ✓ Official Star Loom Release
-
+                <p class="status" data-en="✓ Official Star Loom Release" data-fa="✓ انتشار رسمی استار لوم">
+                    ✓ انتشار رسمی استار لوم
                 </p>
-
             </article>
-
 
             <!-- VERSION 0.2 -->
-
             <article class="card old-version">
-
-                <h3>
-                    Loom Engine 0.2
-                </h3>
-
-                <span class="version">
-                    Archived
-                </span>
-
-                <p style="margin-top:15px;">
-
-                    An early version of the Loom Engine
-                    development project.
-
+                <h3 data-en="Loom Engine 0.2" data-fa="موتور لوم 0.2">موتور لوم 0.2</h3>
+                <span class="version" data-en="Archived" data-fa="بایگانی شده">بایگانی شده</span>
+                <p style="margin-top:20px;" 
+                   data-en="An early version of the Loom Engine development project." 
+                   data-fa="نسخه اولیه پروژه توسعه موتور لوم.">
+                    نسخه اولیه پروژه توسعه موتور لوم.
                 </p>
-
-                <p class="download-info">
-
-                    This version has been replaced by
-                    Loom Engine 1.6.
-
+                <p class="download-info" 
+                   data-en="This version has been replaced by Loom Engine 1.6." 
+                   data-fa="این نسخه با موتور لوم 1.6 جایگزین شده است.">
+                    این نسخه با موتور لوم 1.6 جایگزین شده است.
                 </p>
-
             </article>
-
-
         </div>
-
     </section>
-
 
     <!-- SOFTWARE -->
-
     <section id="software">
-
-        <h2>
-            Software
-        </h2>
-
+        <h2 data-en="Software" data-fa="نرم‌افزار">نرم‌افزار</h2>
         <div class="grid">
-
             <article class="card">
-
-                <h3>
-                    Star Loom Software
-                </h3>
-
-                <p>
-                    Software and development tools
-                    created by Star Loom.
+                <h3 data-en="Star Loom Software" data-fa="نرم‌افزار استار لوم">نرم‌افزار استار لوم</h3>
+                <p data-en="Software and development tools created by Star Loom." 
+                   data-fa="نرم‌افزار و ابزارهای توسعه ساخته استار لوم.">
+                    نرم‌افزار و ابزارهای توسعه ساخته استار لوم.
                 </p>
-
             </article>
-
         </div>
-
     </section>
-
 
     <!-- ABOUT -->
-
     <section id="about">
-
-        <h2>
-            About Star Loom
-        </h2>
-
-        <p>
-
-            Star Loom is an independent game and software
-            development project focused on creating games,
-            tools and the Loom Engine.
-
+        <h2 data-en="About Star Loom" data-fa="درباره استار لوم">درباره استار لوم</h2>
+        <p style="text-align:center; max-width:700px; margin:auto; color:var(--text-secondary); font-size:18px;"
+           data-en="Star Loom is an independent game and software development project focused on creating games, tools and the Loom Engine." 
+           data-fa="استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که بر ساخت بازی‌ها، ابزارها و موتور لوم تمرکز دارد.">
+            استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که بر ساخت بازی‌ها، ابزارها و موتور لوم تمرکز دارد.
         </p>
-
     </section>
-
-
 </main>
 
-
 <footer>
-
-    <p>
-        © 2026 Star Loom. All rights reserved.
+    <p data-en="© 2026 Star Loom. All rights reserved." data-fa="© 2026 استار لوم. تمامی حقوق محفوظ است.">
+        © 2026 استار لوم. تمامی حقوق محفوظ است.
     </p>
-
 </footer>
 
+<script>
+    let currentLang = 'fa'; // زبان پیش‌فرض فارسی
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'fa' ? 'en' : 'fa';
+        updateLanguage();
+    }
+
+    function updateLanguage() {
+        const html = document.documentElement;
+        const langToggleText = document.querySelector('.lang-text');
+        
+        if (currentLang === 'fa') {
+            html.lang = 'fa';
+            html.dir = 'rtl';
+            langToggleText.textContent = 'English';
+        } else {
+            html.lang = 'en';
+            html.dir = 'ltr';
+            langToggleText.textContent = 'فارسی';
+        }
+
+        // به‌روزرسانی تمام عناصر با data-en و data-fa
+        document.querySelectorAll('[data-en][data-fa]').forEach(element => {
+            element.textContent = element.getAttribute(`data-${currentLang}`);
+        });
+
+        // ذخیره زبان انتخاب شده در localStorage
+        localStorage.setItem('starLoomLang', currentLang);
+    }
+
+    // بارگذاری زبان ذخیره شده
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('starLoomLang');
+        if (savedLang) {
+            currentLang = savedLang;
+            updateLanguage();
+        }
+    });
+</script>
 
 </body>
-
 </html>
