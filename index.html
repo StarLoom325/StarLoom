@@ -2,63 +2,61 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="google-site-verification"
-        content="SzG9uXuwl9cz1PR138MmUOSuRbty3bSFNzscdlu3aqc"
-    >
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Star Loom | استار لوم</title>
-
-    <meta
-        name="description"
-        content="Star Loom creates games, software and Loom Engine. استار لوم بازی‌ها، نرم‌افزار و موتور لوم را می‌سازد."
-    >
-
-    <meta
-        name="keywords"
-        content="Star Loom, StarLoom, Loom Engine, game engine, games, software, استار لوم, موتور بازی"
-    >
-
+    <meta name="google-site-verification" content="SzG9uXuwl9cz1PR138MmUOSuRbty3bSFNzscdlu3aqc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- سئو قوی -->
+    <title>Star Loom | استار لوم - موتور بازی لوم انجین | Loom Engine</title>
+    
+    <meta name="description" content="استار لوم (Star Loom) - سازنده موتور بازی لوم انجین (Loom Engine)، بازی‌ها و نرم‌افزار. دانلود رایگان لوم انجین، ثبت نام و عضویت در استار لوم">
+    <meta name="keywords" content="Star Loom, Star_Loom, استار لوم, لوم انجین, Loom Engine, موتور بازی, game engine, بازی, دانلود لوم انجین">
     <meta name="author" content="Star Loom">
-    <meta name="robots" content="index, follow">
-
-    <link
-        rel="canonical"
-        href="https://hasanhesamramkani-jpg.github.io/StarLoom/"
-    >
-
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- لینک‌های مهم سئو با نام کاربری جدید -->
+    <link rel="canonical" href="https://StarLoom-jpg.github.io/StarLoom/">
+    <link rel="alternate" hreflang="fa" href="https://StarLoom-jpg.github.io/StarLoom/">
+    <link rel="alternate" hreflang="en" href="https://StarLoom-jpg.github.io/StarLoom/">
+    
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Star Loom | استار لوم">
-    <meta property="og:description" content="Games, software and Loom Engine. بازی‌ها، نرم‌افزار و موتور لوم.">
-    <meta property="og:url" content="https://hasanhesamramkani-jpg.github.io/StarLoom/">
-    <meta property="og:site_name" content="Star Loom">
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Star Loom | استار لوم">
-    <meta name="twitter:description" content="Games, software and Loom Engine. بازی‌ها، نرم‌افزار و موتور لوم.">
-
+    <meta property="og:title" content="Star Loom | استار لوم - موتور بازی لوم انجین">
+    <meta property="og:description" content="دانلود رایگان موتور بازی لوم انجین (Loom Engine)، بازی‌ها و نرم‌افزارهای استار لوم">
+    <meta property="og:url" content="https://StarLoom-jpg.github.io/StarLoom/">
+    <meta property="og:site_name" content="Star Loom | استار لوم">
+    <meta property="og:locale" content="fa_IR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Star Loom | استار لوم - لوم انجین">
+    <meta name="twitter:description" content="موتور بازی لوم انجین (Loom Engine) - دانلود رایگان">
+    
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
-
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Star Loom",
-        "url": "https://hasanhesamramkani-jpg.github.io/StarLoom/",
-        "description": "Star Loom creates games, software and game development tools."
+        "alternateName": "استار لوم",
+        "url": "https://StarLoom-jpg.github.io/StarLoom/",
+        "description": "Star Loom (استار لوم) - سازنده موتور بازی Loom Engine (لوم انجین)، بازی‌ها و نرم‌افزار"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Star Loom",
+        "alternateName": "استار لوم",
+        "url": "https://StarLoom-jpg.github.io/StarLoom/"
     }
     </script>
 
+    <!-- بقیه استایل‌ها -->
     <style>
         :root {
             --bg-dark: #0a0f1e;
@@ -123,7 +121,8 @@
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -135,6 +134,96 @@
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
             text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .auth-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        
+        .login-btn {
+            background: rgba(96, 165, 250, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            color: var(--accent);
+        }
+        
+        .login-btn:hover {
+            background: rgba(96, 165, 250, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .signup-btn {
+            background: linear-gradient(135deg, var(--button-primary), #3b82f6);
+            color: white;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .signup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+        
+        .user-menu {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            background: rgba(96, 165, 250, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+        
+        .user-menu.active {
+            display: flex;
+        }
+        
+        .user-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .user-name {
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .logout-btn {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(239, 68, 68, 0.3);
         }
 
         .lang-toggle {
@@ -395,11 +484,137 @@
             border-top: 1px solid var(--border-color);
         }
 
-        /* برای حالت انگلیسی */
-        [dir="ltr"] .logo {
-            letter-spacing: -0.5px;
+        /* مودال‌ها */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .close-btn:hover {
+            color: white;
+            transform: rotate(90deg);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(135deg, var(--button-primary), #3b82f6);
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+            text-align: center;
+        }
+        
+        .success-message {
+            color: #10b981;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+            text-align: center;
         }
 
+        /* برای حالت انگلیسی */
         [dir="ltr"] body {
             font-family: 'Segoe UI', Arial, sans-serif;
         }
@@ -409,7 +624,7 @@
             left: 0;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
             nav {
                 flex-direction: column;
                 gap: 15px;
@@ -418,6 +633,11 @@
             .nav-left {
                 width: 100%;
                 justify-content: space-between;
+            }
+
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
             }
 
             nav ul {
@@ -445,14 +665,25 @@
 <header>
     <nav>
         <div class="nav-left">
-            <div class="logo" data-en="⭐ Star Loom" data-fa="⭐ استار لوم">
-                ⭐ استار لوم
-            </div>
+            <a href="#home" class="logo" data-en="⭐ Star Loom" data-fa="⭐ استار لوم">⭐ استار لوم</a>
             
-            <button class="lang-toggle" onclick="toggleLanguage()">
-                <span class="lang-icon">🌐</span>
-                <span class="lang-text" data-en="فارسی" data-fa="English">English</span>
-            </button>
+            <div class="auth-buttons">
+                <button class="lang-toggle" onclick="toggleLanguage()">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text">English</span>
+                </button>
+                
+                <!-- دکمه‌های لاگین/ثبت نام -->
+                <button class="auth-btn login-btn" onclick="showLogin()" data-en="Login" data-fa="ورود">ورود</button>
+                <button class="auth-btn signup-btn" onclick="showSignup()" data-en="Sign Up" data-fa="ثبت نام">ثبت نام</button>
+                
+                <!-- منوی کاربر لاگین شده -->
+                <div class="user-menu" id="userMenu">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <span class="user-name" id="userName">User</span>
+                    <button class="logout-btn" onclick="logout()" data-en="Logout" data-fa="خروج">خروج</button>
+                </div>
+            </div>
         </div>
 
         <ul>
@@ -464,6 +695,59 @@
         </ul>
     </nav>
 </header>
+
+<!-- مودال ورود -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" data-en="Login" data-fa="ورود">ورود</h3>
+            <button class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+        </div>
+        <form onsubmit="login(event)">
+            <div class="form-group">
+                <label data-en="Email or Username" data-fa="ایمیل یا نام کاربری">ایمیل یا نام کاربری</label>
+                <input type="text" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <label data-en="Password" data-fa="رمز عبور">رمز عبور</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit" class="submit-btn" data-en="Login" data-fa="ورود">ورود</button>
+            <p class="error-message" id="loginError" data-en="Invalid credentials" data-fa="اطلاعات وارد شده صحیح نیست">اطلاعات وارد شده صحیح نیست</p>
+        </form>
+    </div>
+</div>
+
+<!-- مودال ثبت نام -->
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" data-en="Sign Up" data-fa="ثبت نام">ثبت نام</h3>
+            <button class="close-btn" onclick="closeModal('signupModal')">&times;</button>
+        </div>
+        <form onsubmit="signup(event)">
+            <div class="form-group">
+                <label data-en="Full Name" data-fa="نام کامل">نام کامل</label>
+                <input type="text" id="signupName" required>
+            </div>
+            <div class="form-group">
+                <label data-en="Email" data-fa="ایمیل">ایمیل</label>
+                <input type="email" id="signupEmail" required>
+            </div>
+            <div class="form-group">
+                <label data-en="Username" data-fa="نام کاربری">نام کاربری</label>
+                <input type="text" id="signupUsername" required>
+            </div>
+            <div class="form-group">
+                <label data-en="Password" data-fa="رمز عبور">رمز عبور</label>
+                <input type="password" id="signupPassword" required minlength="6">
+            </div>
+            <button type="submit" class="submit-btn" data-en="Create Account" data-fa="ایجاد حساب">ایجاد حساب</button>
+            <p class="error-message" id="signupError" data-en="This email or username already exists" data-fa="این ایمیل یا نام کاربری قبلاً ثبت شده است">این ایمیل یا نام کاربری قبلاً ثبت شده است</p>
+            <p class="success-message" id="signupSuccess" data-en="Account created successfully!" data-fa="حساب شما با موفقیت ایجاد شد!">حساب شما با موفقیت ایجاد شد!</p>
+        </form>
+    </div>
+</div>
 
 <main>
     <!-- HOME -->
@@ -578,13 +862,14 @@
 </footer>
 
 <script>
-    let currentLang = 'fa'; // زبان پیش‌فرض فارسی
-
+    // ============ سیستم زبان ============
+    let currentLang = 'fa';
+    
     function toggleLanguage() {
         currentLang = currentLang === 'fa' ? 'en' : 'fa';
         updateLanguage();
     }
-
+    
     function updateLanguage() {
         const html = document.documentElement;
         const langToggleText = document.querySelector('.lang-text');
@@ -593,28 +878,165 @@
             html.lang = 'fa';
             html.dir = 'rtl';
             langToggleText.textContent = 'English';
+            document.title = 'Star Loom | استار لوم - موتور بازی لوم انجین | Loom Engine';
         } else {
             html.lang = 'en';
             html.dir = 'ltr';
             langToggleText.textContent = 'فارسی';
+            document.title = 'Star Loom - Loom Engine | Game Engine';
         }
-
-        // به‌روزرسانی تمام عناصر با data-en و data-fa
+        
         document.querySelectorAll('[data-en][data-fa]').forEach(element => {
-            element.textContent = element.getAttribute(`data-${currentLang}`);
+            const value = element.getAttribute(`data-${currentLang}`);
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = value;
+            } else {
+                element.textContent = value;
+            }
         });
-
-        // ذخیره زبان انتخاب شده در localStorage
+        
         localStorage.setItem('starLoomLang', currentLang);
     }
-
-    // بارگذاری زبان ذخیره شده
+    
+    // ============ سیستم کاربران ============
+    let users = JSON.parse(localStorage.getItem('starLoomUsers') || '[]');
+    let currentUser = JSON.parse(localStorage.getItem('starLoomCurrentUser') || 'null');
+    
+    function showLogin() {
+        document.getElementById('loginModal').classList.add('active');
+        document.getElementById('loginError').style.display = 'none';
+    }
+    
+    function showSignup() {
+        document.getElementById('signupModal').classList.add('active');
+        document.getElementById('signupError').style.display = 'none';
+        document.getElementById('signupSuccess').style.display = 'none';
+    }
+    
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove('active');
+    }
+    
+    function signup(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('signupName').value;
+        const email = document.getElementById('signupEmail').value;
+        const username = document.getElementById('signupUsername').value;
+        const password = document.getElementById('signupPassword').value;
+        
+        // بررسی تکراری بودن
+        const userExists = users.some(u => u.email === email || u.username === username);
+        
+        if (userExists) {
+            document.getElementById('signupError').style.display = 'block';
+            document.getElementById('signupSuccess').style.display = 'none';
+            return;
+        }
+        
+        const newUser = {
+            id: Date.now(),
+            name,
+            email,
+            username,
+            password,
+            createdAt: new Date().toISOString()
+        };
+        
+        users.push(newUser);
+        localStorage.setItem('starLoomUsers', JSON.stringify(users));
+        
+        document.getElementById('signupSuccess').style.display = 'block';
+        document.getElementById('signupError').style.display = 'none';
+        
+        // بستن مودال بعد از 1.5 ثانیه
+        setTimeout(() => {
+            closeModal('signupModal');
+            // پاک کردن فرم
+            document.getElementById('signupName').value = '';
+            document.getElementById('signupEmail').value = '';
+            document.getElementById('signupUsername').value = '';
+            document.getElementById('signupPassword').value = '';
+            document.getElementById('signupSuccess').style.display = 'none';
+        }, 1500);
+    }
+    
+    function login(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        
+        const user = users.find(u => 
+            (u.email === email || u.username === email) && u.password === password
+        );
+        
+        if (!user) {
+            document.getElementById('loginError').style.display = 'block';
+            return;
+        }
+        
+        currentUser = user;
+        localStorage.setItem('starLoomCurrentUser', JSON.stringify(user));
+        
+        closeModal('loginModal');
+        updateUserInterface();
+        
+        // پاک کردن فرم
+        document.getElementById('loginEmail').value = '';
+        document.getElementById('loginPassword').value = '';
+        document.getElementById('loginError').style.display = 'none';
+    }
+    
+    function logout() {
+        currentUser = null;
+        localStorage.removeItem('starLoomCurrentUser');
+        updateUserInterface();
+    }
+    
+    function updateUserInterface() {
+        const authButtons = document.querySelectorAll('.auth-btn');
+        const userMenu = document.getElementById('userMenu');
+        
+        if (currentUser) {
+            // کاربر لاگین شده
+            authButtons.forEach(btn => btn.style.display = 'none');
+            userMenu.classList.add('active');
+            
+            // نمایش اطلاعات کاربر
+            document.getElementById('userName').textContent = currentUser.name;
+            document.getElementById('userAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
+        } else {
+            // کاربر لاگین نشده
+            authButtons.forEach(btn => btn.style.display = 'block');
+            userMenu.classList.remove('active');
+        }
+    }
+    
+    // بستن مودال با کلیک روی خارج از آن
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('active');
+        }
+    });
+    
+    // بستن مودال با کلید Escape
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.classList.remove('active');
+            });
+        }
+    });
+    
+    // مقداردهی اولیه
     window.addEventListener('DOMContentLoaded', () => {
         const savedLang = localStorage.getItem('starLoomLang');
         if (savedLang) {
             currentLang = savedLang;
             updateLanguage();
         }
+        updateUserInterface();
     });
 </script>
 
