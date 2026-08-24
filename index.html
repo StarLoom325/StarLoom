@@ -13,18 +13,19 @@
     <meta name="author" content="Star Loom">
     <meta name="robots" content="index, follow, max-image-preview:large">
     
-    <!-- لینک‌های مهم سئو با نام کاربری جدید -->
-    <link rel="canonical" href="https://StarLoom-jpg.github.io/StarLoom/">
-    <link rel="alternate" hreflang="fa" href="https://StarLoom-jpg.github.io/StarLoom/">
-    <link rel="alternate" hreflang="en" href="https://StarLoom-jpg.github.io/StarLoom/">
+    <!-- لینک‌های مهم سئو -->
+    <link rel="canonical" href="https://StarLoom325.github.io/StarLoom/">
+    <link rel="alternate" hreflang="fa" href="https://StarLoom325.github.io/StarLoom/">
+    <link rel="alternate" hreflang="en" href="https://StarLoom325.github.io/StarLoom/">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Star Loom | استار لوم - موتور بازی لوم انجین">
     <meta property="og:description" content="دانلود رایگان موتور بازی لوم انجین (Loom Engine)، بازی‌ها و نرم‌افزارهای استار لوم">
-    <meta property="og:url" content="https://StarLoom-jpg.github.io/StarLoom/">
+    <meta property="og:url" content="https://StarLoom325.github.io/StarLoom/">
     <meta property="og:site_name" content="Star Loom | استار لوم">
     <meta property="og:locale" content="fa_IR">
+    <meta property="og:locale:alternate" content="en_US">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +42,7 @@
         "@type": "Organization",
         "name": "Star Loom",
         "alternateName": "استار لوم",
-        "url": "https://StarLoom-jpg.github.io/StarLoom/",
+        "url": "https://StarLoom325.github.io/StarLoom/",
         "description": "Star Loom (استار لوم) - سازنده موتور بازی Loom Engine (لوم انجین)، بازی‌ها و نرم‌افزار"
     }
     </script>
@@ -52,11 +53,30 @@
         "@type": "WebSite",
         "name": "Star Loom",
         "alternateName": "استار لوم",
-        "url": "https://StarLoom-jpg.github.io/StarLoom/"
+        "url": "https://StarLoom325.github.io/StarLoom/"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Loom Engine",
+        "alternateName": "لوم انجین",
+        "applicationCategory": "Game Engine",
+        "operatingSystem": "Windows",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Star Loom"
+        }
     }
     </script>
 
-    <!-- بقیه استایل‌ها -->
     <style>
         :root {
             --bg-dark: #0a0f1e;
@@ -484,7 +504,6 @@
             border-top: 1px solid var(--border-color);
         }
 
-        /* مودال‌ها */
         .modal {
             display: none;
             position: fixed;
@@ -614,7 +633,6 @@
             text-align: center;
         }
 
-        /* برای حالت انگلیسی */
         [dir="ltr"] body {
             font-family: 'Segoe UI', Arial, sans-serif;
         }
@@ -673,11 +691,9 @@
                     <span class="lang-text">English</span>
                 </button>
                 
-                <!-- دکمه‌های لاگین/ثبت نام -->
                 <button class="auth-btn login-btn" onclick="showLogin()" data-en="Login" data-fa="ورود">ورود</button>
                 <button class="auth-btn signup-btn" onclick="showSignup()" data-en="Sign Up" data-fa="ثبت نام">ثبت نام</button>
                 
-                <!-- منوی کاربر لاگین شده -->
                 <div class="user-menu" id="userMenu">
                     <div class="user-avatar" id="userAvatar">U</div>
                     <span class="user-name" id="userName">User</span>
@@ -696,7 +712,6 @@
     </nav>
 </header>
 
-<!-- مودال ورود -->
 <div class="modal" id="loginModal">
     <div class="modal-content">
         <div class="modal-header">
@@ -718,7 +733,6 @@
     </div>
 </div>
 
-<!-- مودال ثبت نام -->
 <div class="modal" id="signupModal">
     <div class="modal-content">
         <div class="modal-header">
@@ -750,7 +764,6 @@
 </div>
 
 <main>
-    <!-- HOME -->
     <section id="home" class="hero">
         <h1 data-en="Star Loom" data-fa="استار لوم">استار لوم</h1>
         <p data-en="Games, software and game development tools created by Star Loom." 
@@ -762,7 +775,6 @@
         </a>
     </section>
 
-    <!-- GAMES -->
     <section id="games">
         <h2 data-en="Games" data-fa="بازی‌ها">بازی‌ها</h2>
         <div class="grid">
@@ -783,11 +795,9 @@
         </div>
     </section>
 
-    <!-- LOOM ENGINE -->
     <section id="engine">
         <h2 data-en="Loom Engine" data-fa="موتور لوم">موتور لوم</h2>
         <div class="grid">
-            <!-- VERSION 1.6 -->
             <article class="card">
                 <h3 data-en="Loom Engine 1.6" data-fa="موتور لوم 1.6">موتور لوم 1.6</h3>
                 <span class="version" data-en="v1.6 • Latest" data-fa="نسخه 1.6 • جدیدترین">
@@ -799,7 +809,7 @@
                     موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.
                 </p>
                 <a class="button" 
-                   href="https://github.com/hasanhesamramkani-jpg/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
+                   href="https://github.com/StarLoom325/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
                    data-en="⬇ Download Loom Engine 1.6" 
                    data-fa="⬇ دانلود موتور لوم 1.6">
                     ⬇ دانلود موتور لوم 1.6
@@ -812,7 +822,6 @@
                 </p>
             </article>
 
-            <!-- VERSION 0.2 -->
             <article class="card old-version">
                 <h3 data-en="Loom Engine 0.2" data-fa="موتور لوم 0.2">موتور لوم 0.2</h3>
                 <span class="version" data-en="Archived" data-fa="بایگانی شده">بایگانی شده</span>
@@ -830,7 +839,6 @@
         </div>
     </section>
 
-    <!-- SOFTWARE -->
     <section id="software">
         <h2 data-en="Software" data-fa="نرم‌افزار">نرم‌افزار</h2>
         <div class="grid">
@@ -844,7 +852,6 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
         <h2 data-en="About Star Loom" data-fa="درباره استار لوم">درباره استار لوم</h2>
         <p style="text-align:center; max-width:700px; margin:auto; color:var(--text-secondary); font-size:18px;"
@@ -862,7 +869,6 @@
 </footer>
 
 <script>
-    // ============ سیستم زبان ============
     let currentLang = 'fa';
     
     function toggleLanguage() {
@@ -898,7 +904,6 @@
         localStorage.setItem('starLoomLang', currentLang);
     }
     
-    // ============ سیستم کاربران ============
     let users = JSON.parse(localStorage.getItem('starLoomUsers') || '[]');
     let currentUser = JSON.parse(localStorage.getItem('starLoomCurrentUser') || 'null');
     
@@ -925,7 +930,6 @@
         const username = document.getElementById('signupUsername').value;
         const password = document.getElementById('signupPassword').value;
         
-        // بررسی تکراری بودن
         const userExists = users.some(u => u.email === email || u.username === username);
         
         if (userExists) {
@@ -949,10 +953,8 @@
         document.getElementById('signupSuccess').style.display = 'block';
         document.getElementById('signupError').style.display = 'none';
         
-        // بستن مودال بعد از 1.5 ثانیه
         setTimeout(() => {
             closeModal('signupModal');
-            // پاک کردن فرم
             document.getElementById('signupName').value = '';
             document.getElementById('signupEmail').value = '';
             document.getElementById('signupUsername').value = '';
@@ -982,7 +984,6 @@
         closeModal('loginModal');
         updateUserInterface();
         
-        // پاک کردن فرم
         document.getElementById('loginEmail').value = '';
         document.getElementById('loginPassword').value = '';
         document.getElementById('loginError').style.display = 'none';
@@ -999,28 +1000,23 @@
         const userMenu = document.getElementById('userMenu');
         
         if (currentUser) {
-            // کاربر لاگین شده
             authButtons.forEach(btn => btn.style.display = 'none');
             userMenu.classList.add('active');
             
-            // نمایش اطلاعات کاربر
             document.getElementById('userName').textContent = currentUser.name;
             document.getElementById('userAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
         } else {
-            // کاربر لاگین نشده
             authButtons.forEach(btn => btn.style.display = 'block');
             userMenu.classList.remove('active');
         }
     }
     
-    // بستن مودال با کلیک روی خارج از آن
     window.addEventListener('click', function(event) {
         if (event.target.classList.contains('modal')) {
             event.target.classList.remove('active');
         }
     });
     
-    // بستن مودال با کلید Escape
     window.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             document.querySelectorAll('.modal').forEach(modal => {
@@ -1029,7 +1025,6 @@
         }
     });
     
-    // مقداردهی اولیه
     window.addEventListener('DOMContentLoaded', () => {
         const savedLang = localStorage.getItem('starLoomLang');
         if (savedLang) {
