@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="SzG9uXuwl9cz1PR138MmUOSuRbty3bSFNzscdlu3aqc">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- سئو قوی -->
-    <title>Star Loom | استار لوم - موتور بازی لوم انجین | Loom Engine</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Star Loom | استار لوم - موتور بازی لوم انجین</title>
     <meta name="description" content="استار لوم (Star Loom) - سازنده موتور بازی لوم انجین (Loom Engine)، بازی‌ها و نرم‌افزار. دانلود رایگان لوم انجین، ثبت نام و عضویت در استار لوم">
     <meta name="keywords" content="Star Loom, Star_Loom, استار لوم, لوم انجین, Loom Engine, موتور بازی, game engine, بازی, دانلود لوم انجین">
     <meta name="author" content="Star Loom">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    
-    <!-- لینک‌های مهم سئو -->
     <link rel="canonical" href="https://StarLoom325.github.io/StarLoom/">
     <link rel="alternate" hreflang="fa" href="https://StarLoom325.github.io/StarLoom/">
     <link rel="alternate" hreflang="en" href="https://StarLoom325.github.io/StarLoom/">
-    
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Star Loom | استار لوم - موتور بازی لوم انجین">
     <meta property="og:description" content="دانلود رایگان موتور بازی لوم انجین (Loom Engine)، بازی‌ها و نرم‌افزارهای استار لوم">
@@ -26,16 +19,10 @@
     <meta property="og:site_name" content="Star Loom | استار لوم">
     <meta property="og:locale" content="fa_IR">
     <meta property="og:locale:alternate" content="en_US">
-    
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Star Loom | استار لوم - لوم انجین">
     <meta name="twitter:description" content="موتور بازی لوم انجین (Loom Engine) - دانلود رایگان">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
-    
-    <!-- Structured Data -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -46,38 +33,12 @@
         "description": "Star Loom (استار لوم) - سازنده موتور بازی Loom Engine (لوم انجین)، بازی‌ها و نرم‌افزار"
     }
     </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Star Loom",
-        "alternateName": "استار لوم",
-        "url": "https://StarLoom325.github.io/StarLoom/"
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Loom Engine",
-        "alternateName": "لوم انجین",
-        "applicationCategory": "Game Engine",
-        "operatingSystem": "Windows",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Star Loom"
-        }
-    }
-    </script>
-
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         :root {
             --bg-dark: #0a0f1e;
             --bg-card: #111a33;
@@ -87,135 +48,118 @@
             --text-secondary: #cbd5e1;
             --text-muted: #94a3b8;
             --accent: #60a5fa;
-            --accent-hover: #3b82f6;
             --button-primary: #2563eb;
-            --button-hover: #1d4ed8;
             --success: #86efac;
             --gradient-1: #60a5fa;
             --gradient-2: #a78bfa;
             --gradient-3: #34d399;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
-
         body {
             font-family: 'Segoe UI', 'Tahoma', 'Iranian Sans', 'Vazirmatn', Arial, sans-serif;
             background: var(--bg-dark);
             color: var(--text-primary);
             line-height: 1.7;
-            background-image: 
-                radial-gradient(ellipse at 20% 20%, rgba(96, 165, 250, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(167, 139, 250, 0.05) 0%, transparent 50%);
-            transition: all 0.3s ease;
+            background-image: radial-gradient(ellipse at 20% 20%, rgba(96, 165, 250, 0.05) 0%, transparent 50%),
+                              radial-gradient(ellipse at 80% 80%, rgba(167, 139, 250, 0.05) 0%, transparent 50%);
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
         }
-
         header {
             background: rgba(13, 20, 40, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            padding: 18px 20px;
+            padding: 14px 16px;
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
         }
-
         nav {
             max-width: 1200px;
             margin: auto;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 12px;
+            width: 100%;
         }
-
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
-
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
-            text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
+            white-space: nowrap;
         }
-
         .auth-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
             flex-wrap: wrap;
         }
-        
         .auth-btn {
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 8px;
             border: none;
             cursor: pointer;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             transition: all 0.3s;
             white-space: nowrap;
         }
-        
         .login-btn {
             background: rgba(96, 165, 250, 0.15);
             border: 1px solid rgba(96, 165, 250, 0.3);
             color: var(--accent);
         }
-        
         .login-btn:hover {
             background: rgba(96, 165, 250, 0.25);
             transform: translateY(-2px);
         }
-        
         .signup-btn {
             background: linear-gradient(135deg, var(--button-primary), #3b82f6);
             color: white;
             box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
         }
-        
         .signup-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
         }
-        
         .user-menu {
             display: none;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: rgba(96, 165, 250, 0.15);
             border: 1px solid rgba(96, 165, 250, 0.3);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 8px;
         }
-        
         .user-menu.active {
             display: flex;
         }
-        
         .user-avatar {
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
             display: flex;
@@ -223,69 +167,67 @@
             justify-content: center;
             font-weight: bold;
             color: white;
+            font-size: 14px;
         }
-        
         .user-name {
             color: white;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
         }
-        
         .logout-btn {
             background: rgba(239, 68, 68, 0.2);
             border: 1px solid rgba(239, 68, 68, 0.3);
             color: #ef4444;
-            padding: 6px 12px;
+            padding: 4px 10px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 12px;
             transition: all 0.3s;
         }
-        
         .logout-btn:hover {
             background: rgba(239, 68, 68, 0.3);
         }
-
         .lang-toggle {
             background: rgba(96, 165, 250, 0.15);
             border: 1px solid rgba(96, 165, 250, 0.3);
             color: var(--accent);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             white-space: nowrap;
         }
-
         .lang-toggle:hover {
             background: rgba(96, 165, 250, 0.25);
             border-color: rgba(96, 165, 250, 0.5);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
         }
-
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 18px;
             flex-wrap: wrap;
+            align-items: center;
+            padding: 6px 0;
         }
-
         nav a {
             color: var(--text-secondary);
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
             position: relative;
-            padding: 5px 0;
-            font-size: 15px;
+            padding: 4px 0;
+            font-size: 14px;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
-
         nav a::after {
             content: '';
             position: absolute;
@@ -294,53 +236,37 @@
             width: 0;
             height: 2px;
             background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: width 0.3s;
             border-radius: 2px;
         }
-
         nav a:hover {
             color: var(--accent);
         }
-
         nav a:hover::after {
             width: 100%;
         }
-
         main {
             max-width: 1200px;
             margin: auto;
+            padding: 0 16px;
+            width: 100%;
         }
-
         section {
-            padding: 90px 20px;
-            position: relative;
+            padding: 60px 0;
+            width: 100%;
         }
-
         .hero {
-            min-height: 85vh;
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
             position: relative;
+            width: 100%;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
         .hero h1 {
-            font-size: clamp(50px, 9vw, 100px);
-            margin-bottom: 25px;
+            font-size: clamp(44px, 10vw, 80px);
+            margin-bottom: 20px;
             background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
             -webkit-background-clip: text;
             background-clip: text;
@@ -348,31 +274,31 @@
             letter-spacing: -2px;
             filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.3));
         }
-
         .hero p {
             max-width: 700px;
             margin: auto;
             color: var(--text-secondary);
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 300;
+            padding: 0 10px;
         }
-
         .button {
             display: inline-block;
-            margin-top: 35px;
-            padding: 16px 32px;
+            margin-top: 30px;
+            padding: 14px 28px;
             border-radius: 12px;
             background: linear-gradient(135deg, var(--button-primary), #3b82f6);
             color: white;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 15px;
+            transition: all 0.3s;
             box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
             position: relative;
             overflow: hidden;
+            border: none;
+            cursor: pointer;
         }
-
         .button::before {
             content: '';
             position: absolute;
@@ -383,20 +309,17 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-
         .button:hover::before {
             left: 100%;
         }
-
         .button:hover {
-            background: linear-gradient(135deg, var(--button-hover), #2563eb);
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(37, 99, 235, 0.6);
         }
-
         h2 {
-            font-size: 40px;
-            margin-bottom: 35px;
+            font-size: 36px;
+            margin-bottom: 30px;
             text-align: center;
             background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
             -webkit-background-clip: text;
@@ -404,33 +327,30 @@
             -webkit-text-fill-color: transparent;
             position: relative;
         }
-
         h2::after {
             content: '';
             display: block;
             width: 60px;
             height: 3px;
             background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
-            margin: 15px auto 0;
+            margin: 12px auto 0;
             border-radius: 3px;
         }
-
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
+            width: 100%;
         }
-
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 30px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 28px 24px;
+            transition: all 0.3s;
             position: relative;
             overflow: hidden;
         }
-
         .card::before {
             content: '';
             position: absolute;
@@ -442,68 +362,91 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border-color: rgba(96, 165, 250, 0.4);
         }
-
         .card:hover::before {
             opacity: 1;
         }
-
         .card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
+            margin-bottom: 12px;
+            font-size: 20px;
             color: var(--accent);
         }
-
         .card p {
             color: var(--text-secondary);
         }
-
         .version {
             display: inline-block;
-            margin-top: 15px;
-            padding: 8px 14px;
+            margin-top: 12px;
+            padding: 6px 12px;
             border-radius: 8px;
             background: rgba(96, 165, 250, 0.15);
             color: var(--accent);
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             border: 1px solid rgba(96, 165, 250, 0.3);
         }
-
         .download-info {
-            margin-top: 18px;
+            margin-top: 14px;
             color: var(--text-muted);
             font-size: 13px;
         }
-
         .status {
-            margin-top: 15px;
+            margin-top: 12px;
             color: var(--success);
             font-size: 14px;
             font-weight: 500;
         }
-
         .old-version {
             opacity: 0.6;
         }
-
         .old-version:hover {
             opacity: 1;
         }
-
+        .about-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        .about-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 12px;
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+        .about-social a:hover {
+            background: rgba(96, 165, 250, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(96, 165, 250, 0.2);
+        }
+        .about-text {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            color: var(--text-secondary);
+            font-size: 17px;
+        }
         footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
             background: rgba(8, 12, 24, 0.9);
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
+            width: 100%;
         }
-
         .modal {
             display: none;
             position: fixed;
@@ -517,71 +460,56 @@
             justify-content: center;
             backdrop-filter: blur(5px);
         }
-        
         .modal.active {
             display: flex;
         }
-        
         .modal-content {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 30px;
+            padding: 28px 24px;
             max-width: 400px;
-            width: 90%;
+            width: 92%;
             position: relative;
             animation: slideIn 0.3s ease;
         }
-        
         @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        
         .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
-        
         .modal-title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             color: white;
         }
-        
         .close-btn {
             background: none;
             border: none;
             color: var(--text-secondary);
-            font-size: 24px;
+            font-size: 28px;
             cursor: pointer;
             transition: all 0.3s;
+            line-height: 1;
         }
-        
         .close-btn:hover {
             color: white;
             transform: rotate(90deg);
         }
-        
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
-        
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--text-secondary);
             font-size: 14px;
         }
-        
         .form-group input {
             width: 100%;
             padding: 12px;
@@ -592,13 +520,11 @@
             font-size: 14px;
             transition: all 0.3s;
         }
-        
         .form-group input:focus {
             outline: none;
             border-color: var(--accent);
             box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
         }
-        
         .submit-btn {
             width: 100%;
             padding: 14px;
@@ -611,12 +537,10 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
         }
-        
         .error-message {
             color: #ef4444;
             font-size: 14px;
@@ -624,7 +548,6 @@
             display: none;
             text-align: center;
         }
-        
         .success-message {
             color: #10b981;
             font-size: 14px;
@@ -632,68 +555,41 @@
             display: none;
             text-align: center;
         }
-
-        [dir="ltr"] body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        [dir="ltr"] nav a::after {
-            right: auto;
-            left: 0;
-        }
-
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-left {
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            .auth-buttons {
-                width: 100%;
-                justify-content: center;
-            }
-
-            nav ul {
-                justify-content: center;
-                gap: 18px;
-            }
-
-            section {
-                padding: 60px 15px;
-            }
-
-            .hero h1 {
-                font-size: 50px;
-            }
-
-            h2 {
-                font-size: 32px;
-            }
+            header { padding: 10px 12px; }
+            nav { gap: 8px; }
+            .nav-left { width: 100%; justify-content: space-between; }
+            .auth-buttons { width: 100%; justify-content: center; gap: 6px; }
+            nav ul { justify-content: center; gap: 12px; width: 100%; padding: 4px 0; }
+            nav a { font-size: 13px; }
+            section { padding: 40px 0; }
+            .hero { min-height: 60vh; }
+            .hero h1 { font-size: 44px; }
+            .hero p { font-size: 16px; }
+            .grid { grid-template-columns: 1fr; }
+            .about-social { gap: 12px; }
+            .about-social a { padding: 8px 16px; font-size: 14px; }
+        }
+        @media (max-width: 480px) {
+            .logo { font-size: 22px; }
+            .auth-btn { padding: 5px 10px; font-size: 12px; }
+            .lang-toggle { padding: 5px 10px; font-size: 12px; }
+            .modal-content { padding: 20px 16px; }
         }
     </style>
 </head>
-
 <body>
-
 <header>
     <nav>
         <div class="nav-left">
             <a href="#home" class="logo" data-en="⭐ Star Loom" data-fa="⭐ استار لوم">⭐ استار لوم</a>
-            
             <div class="auth-buttons">
                 <button class="lang-toggle" onclick="toggleLanguage()">
-                    <span class="lang-icon">🌐</span>
+                    <span>🌐</span>
                     <span class="lang-text">English</span>
                 </button>
-                
                 <button class="auth-btn login-btn" onclick="showLogin()" data-en="Login" data-fa="ورود">ورود</button>
                 <button class="auth-btn signup-btn" onclick="showSignup()" data-en="Sign Up" data-fa="ثبت نام">ثبت نام</button>
-                
                 <div class="user-menu" id="userMenu">
                     <div class="user-avatar" id="userAvatar">U</div>
                     <span class="user-name" id="userName">User</span>
@@ -701,13 +597,12 @@
                 </div>
             </div>
         </div>
-
         <ul>
-            <li><a href="#home" data-en="Home" data-fa="خانه">خانه</a></li>
-            <li><a href="#games" data-en="Games" data-fa="بازی‌ها">بازی‌ها</a></li>
-            <li><a href="#engine" data-en="Loom Engine" data-fa="موتور لوم">موتور لوم</a></li>
-            <li><a href="#software" data-en="Software" data-fa="نرم‌افزار">نرم‌افزار</a></li>
-            <li><a href="#about" data-en="About" data-fa="درباره ما">درباره ما</a></li>
+            <li><a href="#home" data-en="🏠 Home" data-fa="🏠 خانه">🏠 خانه</a></li>
+            <li><a href="#games" data-en="🎮 Games" data-fa="🎮 بازی‌ها">🎮 بازی‌ها</a></li>
+            <li><a href="#engine" data-en="⚙️ Loom Engine" data-fa="⚙️ موتور لوم">⚙️ موتور لوم</a></li>
+            <li><a href="#software" data-en="💻 Software" data-fa="💻 نرم‌افزار">💻 نرم‌افزار</a></li>
+            <li><a href="#about" data-en="ℹ️ About" data-fa="ℹ️ درباره ما">ℹ️ درباره ما</a></li>
         </ul>
     </nav>
 </header>
@@ -766,31 +661,20 @@
 <main>
     <section id="home" class="hero">
         <h1 data-en="Star Loom" data-fa="استار لوم">استار لوم</h1>
-        <p data-en="Games, software and game development tools created by Star Loom." 
-           data-fa="بازی‌ها، نرم‌افزار و ابزارهای توسعه بازی ساخته استار لوم">
-            بازی‌ها، نرم‌افزار و ابزارهای توسعه بازی ساخته استار لوم
-        </p>
-        <a class="button" href="#engine" data-en="Explore Loom Engine" data-fa="کاوش موتور لوم">
-            کاوش موتور لوم
-        </a>
+        <p data-en="Games, software and game development tools created by Star Loom." data-fa="بازی‌ها، نرم‌افزار و ابزارهای توسعه بازی ساخته استار لوم">بازی‌ها، نرم‌افزار و ابزارهای توسعه بازی ساخته استار لوم</p>
+        <a class="button" href="#engine" data-en="Explore Loom Engine" data-fa="کاوش موتور لوم">کاوش موتور لوم</a>
     </section>
 
     <section id="games">
         <h2 data-en="Games" data-fa="بازی‌ها">بازی‌ها</h2>
         <div class="grid">
             <article class="card">
-                <h3 data-en="Star Loom Games" data-fa="بازی‌های استار لوم">بازی‌های استار لوم</h3>
-                <p data-en="Discover games and interactive projects developed by Star Loom." 
-                   data-fa="بازی‌ها و پروژه‌های تعاملی ساخته استار لوم را کشف کنید.">
-                    بازی‌ها و پروژه‌های تعاملی ساخته استار لوم را کشف کنید.
-                </p>
+                <h3 data-en="🎮 Star Loom Games" data-fa="🎮 بازی‌های استار لوم">🎮 بازی‌های استار لوم</h3>
+                <p data-en="Discover games and interactive projects developed by Star Loom." data-fa="بازی‌ها و پروژه‌های تعاملی ساخته استار لوم را کشف کنید.">بازی‌ها و پروژه‌های تعاملی ساخته استار لوم را کشف کنید.</p>
             </article>
             <article class="card">
-                <h3 data-en="Game Projects" data-fa="پروژه‌های بازی">پروژه‌های بازی</h3>
-                <p data-en="Explore current and future game development projects." 
-                   data-fa="پروژه‌های فعلی و آینده توسعه بازی را کاوش کنید.">
-                    پروژه‌های فعلی و آینده توسعه بازی را کاوش کنید.
-                </p>
+                <h3 data-en="🚀 Game Projects" data-fa="🚀 پروژه‌های بازی">🚀 پروژه‌های بازی</h3>
+                <p data-en="Explore current and future game development projects." data-fa="پروژه‌های فعلی و آینده توسعه بازی را کاوش کنید.">پروژه‌های فعلی و آینده توسعه بازی را کاوش کنید.</p>
             </article>
         </div>
     </section>
@@ -799,42 +683,18 @@
         <h2 data-en="Loom Engine" data-fa="موتور لوم">موتور لوم</h2>
         <div class="grid">
             <article class="card">
-                <h3 data-en="Loom Engine 1.6" data-fa="موتور لوم 1.6">موتور لوم 1.6</h3>
-                <span class="version" data-en="v1.6 • Latest" data-fa="نسخه 1.6 • جدیدترین">
-                    نسخه 1.6 • جدیدترین
-                </span>
-                <p style="margin-top:20px;" 
-                   data-en="Loom Engine 1.6 is the latest version of the Loom Engine game development project created by Star Loom." 
-                   data-fa="موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.">
-                    موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.
-                </p>
-                <a class="button" 
-                   href="https://github.com/StarLoom325/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
-                   data-en="⬇ Download Loom Engine 1.6" 
-                   data-fa="⬇ دانلود موتور لوم 1.6">
-                    ⬇ دانلود موتور لوم 1.6
-                </a>
-                <p class="download-info" data-en="Windows • EXE • 45.5 MB • Free" data-fa="ویندوز • EXE • 45.5 مگابایت • رایگان">
-                    ویندوز • EXE • 45.5 مگابایت • رایگان
-                </p>
-                <p class="status" data-en="✓ Official Star Loom Release" data-fa="✓ انتشار رسمی استار لوم">
-                    ✓ انتشار رسمی استار لوم
-                </p>
+                <h3 data-en="⚡ Loom Engine 1.6" data-fa="⚡ موتور لوم 1.6">⚡ موتور لوم 1.6</h3>
+                <span class="version" data-en="v1.6 • Latest" data-fa="نسخه 1.6 • جدیدترین">نسخه 1.6 • جدیدترین</span>
+                <p style="margin-top:16px;" data-en="Loom Engine 1.6 is the latest version of the Loom Engine game development project created by Star Loom." data-fa="موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.">موتور لوم 1.6 جدیدترین نسخه پروژه توسعه موتور بازی لوم ساخته استار لوم است.</p>
+                <a class="button" href="https://github.com/StarLoom325/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe" data-en="⬇ Download Loom Engine 1.6" data-fa="⬇ دانلود موتور لوم 1.6">⬇ دانلود موتور لوم 1.6</a>
+                <p class="download-info" data-en="Windows • EXE • 45.5 MB • Free" data-fa="ویندوز • EXE • 45.5 مگابایت • رایگان">ویندوز • EXE • 45.5 مگابایت • رایگان</p>
+                <p class="status" data-en="✓ Official Star Loom Release" data-fa="✓ انتشار رسمی استار لوم">✓ انتشار رسمی استار لوم</p>
             </article>
-
             <article class="card old-version">
-                <h3 data-en="Loom Engine 0.2" data-fa="موتور لوم 0.2">موتور لوم 0.2</h3>
+                <h3 data-en="📦 Loom Engine 0.2" data-fa="📦 موتور لوم 0.2">📦 موتور لوم 0.2</h3>
                 <span class="version" data-en="Archived" data-fa="بایگانی شده">بایگانی شده</span>
-                <p style="margin-top:20px;" 
-                   data-en="An early version of the Loom Engine development project." 
-                   data-fa="نسخه اولیه پروژه توسعه موتور لوم.">
-                    نسخه اولیه پروژه توسعه موتور لوم.
-                </p>
-                <p class="download-info" 
-                   data-en="This version has been replaced by Loom Engine 1.6." 
-                   data-fa="این نسخه با موتور لوم 1.6 جایگزین شده است.">
-                    این نسخه با موتور لوم 1.6 جایگزین شده است.
-                </p>
+                <p style="margin-top:16px;" data-en="An early version of the Loom Engine development project." data-fa="نسخه اولیه پروژه توسعه موتور لوم.">نسخه اولیه پروژه توسعه موتور لوم.</p>
+                <p class="download-info" data-en="This version has been replaced by Loom Engine 1.6." data-fa="این نسخه با موتور لوم 1.6 جایگزین شده است.">این نسخه با موتور لوم 1.6 جایگزین شده است.</p>
             </article>
         </div>
     </section>
@@ -843,55 +703,50 @@
         <h2 data-en="Software" data-fa="نرم‌افزار">نرم‌افزار</h2>
         <div class="grid">
             <article class="card">
-                <h3 data-en="Star Loom Software" data-fa="نرم‌افزار استار لوم">نرم‌افزار استار لوم</h3>
-                <p data-en="Software and development tools created by Star Loom." 
-                   data-fa="نرم‌افزار و ابزارهای توسعه ساخته استار لوم.">
-                    نرم‌افزار و ابزارهای توسعه ساخته استار لوم.
-                </p>
+                <h3 data-en="🛠️ Star Loom Software" data-fa="🛠️ نرم‌افزار استار لوم">🛠️ نرم‌افزار استار لوم</h3>
+                <p data-en="Software and development tools created by Star Loom." data-fa="نرم‌افزار و ابزارهای توسعه ساخته استار لوم.">نرم‌افزار و ابزارهای توسعه ساخته استار لوم.</p>
             </article>
         </div>
     </section>
 
     <section id="about">
         <h2 data-en="About Star Loom" data-fa="درباره استار لوم">درباره استار لوم</h2>
-        <p style="text-align:center; max-width:700px; margin:auto; color:var(--text-secondary); font-size:18px;"
-           data-en="Star Loom is an independent game and software development project focused on creating games, tools and the Loom Engine." 
-           data-fa="استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که بر ساخت بازی‌ها، ابزارها و موتور لوم تمرکز دارد.">
-            استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که بر ساخت بازی‌ها، ابزارها و موتور لوم تمرکز دارد.
-        </p>
+        <p class="about-text" data-en="Star Loom is an independent game and software development project focused on creating games, tools and the Loom Engine." data-fa="استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که بر ساخت بازی‌ها، ابزارها و موتور لوم تمرکز دارد.">استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که بر ساخت بازی‌ها، ابزارها و موتور لوم تمرکز دارد.</p>
+        <div class="about-social">
+            <a href="https://rubika.ir/joinc/FFEBECDA0DAJDJEWKKSMCBTXYCWKJDNV" target="_blank" rel="noopener">
+                <span>📱</span> روبیکا
+            </a>
+            <a href="https://aparat.com/StarLoom" target="_blank" rel="noopener">
+                <span>🎬</span> آپارات
+            </a>
+        </div>
     </section>
 </main>
 
 <footer>
-    <p data-en="© 2026 Star Loom. All rights reserved." data-fa="© 2026 استار لوم. تمامی حقوق محفوظ است.">
-        © 2026 استار لوم. تمامی حقوق محفوظ است.
-    </p>
+    <p data-en="© 2026 Star Loom. All rights reserved." data-fa="© 2026 استار لوم. تمامی حقوق محفوظ است.">© 2026 استار لوم. تمامی حقوق محفوظ است.</p>
 </footer>
 
 <script>
     let currentLang = 'fa';
-    
     function toggleLanguage() {
         currentLang = currentLang === 'fa' ? 'en' : 'fa';
         updateLanguage();
     }
-    
     function updateLanguage() {
         const html = document.documentElement;
         const langToggleText = document.querySelector('.lang-text');
-        
         if (currentLang === 'fa') {
             html.lang = 'fa';
             html.dir = 'rtl';
             langToggleText.textContent = 'English';
-            document.title = 'Star Loom | استار لوم - موتور بازی لوم انجین | Loom Engine';
+            document.title = 'Star Loom | استار لوم - موتور بازی لوم انجین';
         } else {
             html.lang = 'en';
             html.dir = 'ltr';
             langToggleText.textContent = 'فارسی';
             document.title = 'Star Loom - Loom Engine | Game Engine';
         }
-        
         document.querySelectorAll('[data-en][data-fa]').forEach(element => {
             const value = element.getAttribute(`data-${currentLang}`);
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
@@ -900,59 +755,39 @@
                 element.textContent = value;
             }
         });
-        
         localStorage.setItem('starLoomLang', currentLang);
     }
-    
     let users = JSON.parse(localStorage.getItem('starLoomUsers') || '[]');
     let currentUser = JSON.parse(localStorage.getItem('starLoomCurrentUser') || 'null');
-    
     function showLogin() {
         document.getElementById('loginModal').classList.add('active');
         document.getElementById('loginError').style.display = 'none';
     }
-    
     function showSignup() {
         document.getElementById('signupModal').classList.add('active');
         document.getElementById('signupError').style.display = 'none';
         document.getElementById('signupSuccess').style.display = 'none';
     }
-    
     function closeModal(modalId) {
         document.getElementById(modalId).classList.remove('active');
     }
-    
     function signup(event) {
         event.preventDefault();
-        
         const name = document.getElementById('signupName').value;
         const email = document.getElementById('signupEmail').value;
         const username = document.getElementById('signupUsername').value;
         const password = document.getElementById('signupPassword').value;
-        
         const userExists = users.some(u => u.email === email || u.username === username);
-        
         if (userExists) {
             document.getElementById('signupError').style.display = 'block';
             document.getElementById('signupSuccess').style.display = 'none';
             return;
         }
-        
-        const newUser = {
-            id: Date.now(),
-            name,
-            email,
-            username,
-            password,
-            createdAt: new Date().toISOString()
-        };
-        
+        const newUser = { id: Date.now(), name, email, username, password, createdAt: new Date().toISOString() };
         users.push(newUser);
         localStorage.setItem('starLoomUsers', JSON.stringify(users));
-        
         document.getElementById('signupSuccess').style.display = 'block';
         document.getElementById('signupError').style.display = 'none';
-        
         setTimeout(() => {
             closeModal('signupModal');
             document.getElementById('signupName').value = '';
@@ -962,47 +797,34 @@
             document.getElementById('signupSuccess').style.display = 'none';
         }, 1500);
     }
-    
     function login(event) {
         event.preventDefault();
-        
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
-        
-        const user = users.find(u => 
-            (u.email === email || u.username === email) && u.password === password
-        );
-        
+        const user = users.find(u => (u.email === email || u.username === email) && u.password === password);
         if (!user) {
             document.getElementById('loginError').style.display = 'block';
             return;
         }
-        
         currentUser = user;
         localStorage.setItem('starLoomCurrentUser', JSON.stringify(user));
-        
         closeModal('loginModal');
         updateUserInterface();
-        
         document.getElementById('loginEmail').value = '';
         document.getElementById('loginPassword').value = '';
         document.getElementById('loginError').style.display = 'none';
     }
-    
     function logout() {
         currentUser = null;
         localStorage.removeItem('starLoomCurrentUser');
         updateUserInterface();
     }
-    
     function updateUserInterface() {
         const authButtons = document.querySelectorAll('.auth-btn');
         const userMenu = document.getElementById('userMenu');
-        
         if (currentUser) {
             authButtons.forEach(btn => btn.style.display = 'none');
             userMenu.classList.add('active');
-            
             document.getElementById('userName').textContent = currentUser.name;
             document.getElementById('userAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
         } else {
@@ -1010,13 +832,11 @@
             userMenu.classList.remove('active');
         }
     }
-    
     window.addEventListener('click', function(event) {
         if (event.target.classList.contains('modal')) {
             event.target.classList.remove('active');
         }
     });
-    
     window.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             document.querySelectorAll('.modal').forEach(modal => {
@@ -1024,7 +844,6 @@
             });
         }
     });
-    
     window.addEventListener('DOMContentLoaded', () => {
         const savedLang = localStorage.getItem('starLoomLang');
         if (savedLang) {
@@ -1034,6 +853,5 @@
         updateUserInterface();
     });
 </script>
-
 </body>
 </html>
