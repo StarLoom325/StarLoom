@@ -6,17 +6,29 @@
 
     <title>Star Loom | استار لوم</title>
 
-    <meta name="description" content="استار لوم - بازی‌ها، نرم‌افزار و موتور بازی سازی Loom Engine">
+    <meta
+        name="description"
+        content="استار لوم - بازی‌ها، نرم‌افزار و موتور بازی سازی Loom Engine"
+    >
+
     <meta name="robots" content="index, follow">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>"
+    >
 
     <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
     <style>
 
@@ -29,6 +41,7 @@
             --radius: 20px;
             --radius-sm: 12px;
         }
+
 
         /* =========================================================
            THEMES
@@ -70,6 +83,7 @@
                 );
         }
 
+
         [data-theme="ocean"] {
             --bg-primary: #061a2e;
             --bg-secondary: #0c2a48;
@@ -100,6 +114,7 @@
                     transparent 50%
                 );
         }
+
 
         [data-theme="aurora"] {
             --bg-primary: #0a0618;
@@ -132,6 +147,7 @@
                 );
         }
 
+
         [data-theme="forest"] {
             --bg-primary: #07170e;
             --bg-secondary: #0f2a1c;
@@ -162,6 +178,7 @@
                     transparent 50%
                 );
         }
+
 
         [data-theme="sunset"] {
             --bg-primary: #1a0e08;
@@ -194,6 +211,7 @@
                 );
         }
 
+
         /* =========================================================
            RESET
         ========================================================= */
@@ -204,12 +222,19 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+            font-family:
+                'Inter',
+                'Segoe UI',
+                Tahoma,
+                sans-serif;
+
             background: var(--bg-primary);
             color: var(--text-primary);
 
@@ -222,13 +247,16 @@
             background-image: var(--bg-gradient);
 
             overflow-x: hidden;
+
             width: 100%;
         }
+
 
         body::before {
             content: "";
 
             position: fixed;
+
             inset: 0;
 
             pointer-events: none;
@@ -246,14 +274,31 @@
 
             background-size: 50px 50px;
 
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent 85%
-            );
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent 85%
+                );
 
             z-index: -1;
         }
+
+
+        img,
+        iframe,
+        video {
+            max-width: 100%;
+        }
+
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
 
         /* =========================================================
            PRELOADER
@@ -261,6 +306,7 @@
 
         #preloader {
             position: fixed;
+
             inset: 0;
 
             background:
@@ -271,8 +317,11 @@
                 );
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
 
             z-index: 999999;
@@ -282,24 +331,32 @@
                 visibility 0.9s ease;
         }
 
+
         #preloader.hidden {
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
         }
+
 
         .preloader-logo {
             position: relative;
 
             width: 120px;
+
             height: 120px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             margin-bottom: 20px;
         }
+
 
         .preloader-logo::before,
         .preloader-logo::after {
@@ -313,19 +370,26 @@
 
             border: 2px solid transparent;
 
-            animation: loader-spin 2s linear infinite;
+            animation:
+                loader-spin 2s linear infinite;
         }
+
 
         .preloader-logo::before {
             border-top-color: var(--accent-1);
+
             border-right-color: var(--accent-2);
-            box-shadow: 0 0 30px var(--accent-1);
+
+            box-shadow:
+                0 0 30px var(--accent-1);
         }
+
 
         .preloader-logo::after {
             inset: 10px;
 
             border-bottom-color: var(--accent-3);
+
             border-left-color: var(--accent-4);
 
             animation-direction: reverse;
@@ -333,34 +397,52 @@
             animation-duration: 1.5s;
         }
 
+
         .preloader-star {
             font-size: 52px;
 
             filter:
-                drop-shadow(0 0 15px var(--accent-1))
-                drop-shadow(0 0 30px var(--accent-2));
+                drop-shadow(
+                    0 0 15px var(--accent-1)
+                )
+                drop-shadow(
+                    0 0 30px var(--accent-2)
+                );
 
-            animation: star-pulse 1.4s ease-in-out infinite;
+            animation:
+                star-pulse 1.4s ease-in-out infinite;
         }
 
+
         @keyframes star-pulse {
+
             0%,100% {
-                transform: scale(1) rotate(0deg);
+                transform:
+                    scale(1)
+                    rotate(0deg);
             }
 
             50% {
-                transform: scale(1.15) rotate(20deg);
+                transform:
+                    scale(1.15)
+                    rotate(20deg);
             }
+
         }
 
+
         @keyframes loader-spin {
+
             to {
                 transform: rotate(360deg);
             }
+
         }
+
 
         .preloader-title {
             font-size: 30px;
+
             font-weight: 900;
 
             background:
@@ -373,13 +455,17 @@
                 );
 
             -webkit-background-clip: text;
+
             background-clip: text;
+
             -webkit-text-fill-color: transparent;
 
             background-size: 300% 300%;
 
-            animation: gradientMove 3s ease infinite;
+            animation:
+                gradientMove 3s ease infinite;
         }
+
 
         .preloader-text {
             margin-top: 8px;
@@ -389,20 +475,26 @@
             font-size: 13px;
 
             letter-spacing: 2px;
+
+            text-align: center;
         }
+
 
         .preloader-bar {
             margin-top: 25px;
 
             width: 250px;
+
             height: 4px;
 
-            background: rgba(255,255,255,0.06);
+            background:
+                rgba(255,255,255,0.06);
 
             border-radius: 20px;
 
             overflow: hidden;
         }
+
 
         .preloader-bar::after {
             content: "";
@@ -410,6 +502,7 @@
             display: block;
 
             width: 0;
+
             height: 100%;
 
             border-radius: 20px;
@@ -422,18 +515,38 @@
                     var(--accent-3)
                 );
 
-            animation: bar-load 2.4s ease forwards;
+            animation:
+                bar-load 2.4s ease forwards;
         }
+
 
         @keyframes bar-load {
-            0% { width: 0; }
-            30% { width: 30%; }
-            60% { width: 65%; }
-            85% { width: 88%; }
-            100% { width: 100%; }
+
+            0% {
+                width: 0;
+            }
+
+            30% {
+                width: 30%;
+            }
+
+            60% {
+                width: 65%;
+            }
+
+            85% {
+                width: 88%;
+            }
+
+            100% {
+                width: 100%;
+            }
+
         }
 
+
         @keyframes gradientMove {
+
             0%,100% {
                 background-position: 0% 50%;
             }
@@ -441,7 +554,9 @@
             50% {
                 background-position: 100% 50%;
             }
+
         }
+
 
         /* =========================================================
            HEADER
@@ -450,23 +565,31 @@
         header {
             background: var(--bg-header);
 
-            backdrop-filter: blur(24px) saturate(1.6);
-            -webkit-backdrop-filter: blur(24px) saturate(1.6);
+            backdrop-filter:
+                blur(24px)
+                saturate(1.6);
+
+            -webkit-backdrop-filter:
+                blur(24px)
+                saturate(1.6);
 
             padding: 12px 20px;
 
             position: sticky;
+
             top: 0;
 
             z-index: 1000;
 
-            border-bottom: 1px solid var(--border-color);
+            border-bottom:
+                1px solid var(--border-color);
 
             box-shadow:
                 0 4px 30px rgba(0,0,0,0.3);
 
             width: 100%;
         }
+
 
         nav {
             max-width: 1200px;
@@ -478,6 +601,7 @@
             flex-wrap: wrap;
 
             justify-content: space-between;
+
             align-items: center;
 
             gap: 12px;
@@ -485,8 +609,10 @@
             width: 100%;
         }
 
+
         .nav-left {
             display: flex;
+
             align-items: center;
 
             gap: 14px;
@@ -494,8 +620,10 @@
             flex-wrap: wrap;
         }
 
+
         .logo {
             font-size: 26px;
+
             font-weight: 900;
 
             background:
@@ -507,7 +635,9 @@
                 );
 
             -webkit-background-clip: text;
+
             background-clip: text;
+
             -webkit-text-fill-color: transparent;
 
             cursor: pointer;
@@ -523,14 +653,18 @@
             transition: var(--transition);
         }
 
+
         .logo:hover {
             transform: scale(1.04);
         }
 
+
         .logo-icon {
             font-size: 28px;
+
             -webkit-text-fill-color: initial;
         }
+
 
         /* =========================================================
            THEME SELECTOR
@@ -543,58 +677,167 @@
 
             align-items: center;
 
-            background: rgba(255,255,255,0.04);
+            background:
+                rgba(255,255,255,0.04);
 
             padding: 5px 10px;
 
             border-radius: 30px;
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
         }
+
 
         .theme-dot {
             width: 22px;
+
             height: 22px;
 
             border-radius: 50%;
 
-            border: 2px solid transparent;
+            border:
+                2px solid transparent;
 
             cursor: pointer;
 
             transition: var(--transition);
         }
 
+
         .theme-dot:hover {
             transform: scale(1.18);
         }
+
 
         .theme-dot.active {
             border-color: white;
 
             box-shadow:
-                0 0 15px rgba(255,255,255,0.3);
+                0 0 15px
+                rgba(255,255,255,0.3);
         }
+
 
         .theme-dot.galaxy {
-            background: linear-gradient(135deg,#60a5fa,#a78bfa);
+            background:
+                linear-gradient(
+                    135deg,
+                    #60a5fa,
+                    #a78bfa
+                );
         }
+
 
         .theme-dot.ocean {
-            background: linear-gradient(135deg,#38bdf8,#22d3ee);
+            background:
+                linear-gradient(
+                    135deg,
+                    #38bdf8,
+                    #22d3ee
+                );
         }
+
 
         .theme-dot.aurora {
-            background: linear-gradient(135deg,#a78bfa,#f472b6);
+            background:
+                linear-gradient(
+                    135deg,
+                    #a78bfa,
+                    #f472b6
+                );
         }
+
 
         .theme-dot.forest {
-            background: linear-gradient(135deg,#34d399,#6ee7b7);
+            background:
+                linear-gradient(
+                    135deg,
+                    #34d399,
+                    #6ee7b7
+                );
         }
 
+
         .theme-dot.sunset {
-            background: linear-gradient(135deg,#fb923c,#f472b6);
+            background:
+                linear-gradient(
+                    135deg,
+                    #fb923c,
+                    #f472b6
+                );
         }
+
+
+        /* =========================================================
+           LANGUAGE
+        ========================================================= */
+
+        .language-switcher {
+            display: flex;
+
+            align-items: center;
+
+            gap: 3px;
+
+            padding: 4px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid var(--border-color);
+
+            flex-shrink: 0;
+        }
+
+
+        .language-btn {
+            border: none;
+
+            background: transparent;
+
+            color: var(--text-secondary);
+
+            padding: 6px 10px;
+
+            border-radius: 20px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+
+            white-space: nowrap;
+        }
+
+
+        .language-btn:hover {
+            color: var(--text-primary);
+
+            background:
+                rgba(255,255,255,0.08);
+        }
+
+
+        .language-btn.active {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--accent-1),
+                    var(--accent-2)
+                );
+        }
+
 
         /* =========================================================
            AUTH
@@ -609,6 +852,7 @@
 
             flex-wrap: wrap;
         }
+
 
         .auth-btn {
             padding: 7px 16px;
@@ -628,19 +872,26 @@
             font-family: inherit;
         }
 
-        .login-btn {
-            background: rgba(255,255,255,0.06);
 
-            border: 1px solid var(--border-color);
+        .login-btn {
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid var(--border-color);
 
             color: var(--text-secondary);
         }
 
-        .login-btn:hover {
-            background: rgba(255,255,255,0.12);
 
-            transform: translateY(-2px);
+        .login-btn:hover {
+            background:
+                rgba(255,255,255,0.12);
+
+            transform:
+                translateY(-2px);
         }
+
 
         .signup-btn {
             background:
@@ -655,12 +906,17 @@
             border: none;
 
             box-shadow:
-                0 4px 20px rgba(96,165,250,0.25);
+                0 4px 20px
+                rgba(96,165,250,0.25);
         }
 
+
         .signup-btn:hover {
-            transform: translateY(-2px) scale(1.02);
+            transform:
+                translateY(-2px)
+                scale(1.02);
         }
+
 
         .user-menu {
             display: none;
@@ -669,21 +925,27 @@
 
             gap: 10px;
 
-            background: rgba(255,255,255,0.05);
+            background:
+                rgba(255,255,255,0.05);
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
 
-            padding: 5px 14px 5px 10px;
+            padding:
+                5px 14px 5px 10px;
 
             border-radius: 30px;
         }
+
 
         .user-menu.active {
             display: flex;
         }
 
+
         .user-avatar {
             width: 32px;
+
             height: 32px;
 
             border-radius: 50%;
@@ -698,6 +960,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             font-weight: 700;
@@ -705,15 +968,21 @@
             color: white;
         }
 
+
         .user-name {
             font-size: 13px;
+
             font-weight: 600;
         }
 
-        .logout-btn {
-            background: rgba(239,68,68,0.15);
 
-            border: 1px solid rgba(239,68,68,0.2);
+        .logout-btn {
+            background:
+                rgba(239,68,68,0.15);
+
+            border:
+                1px solid
+                rgba(239,68,68,0.2);
 
             color: #ef4444;
 
@@ -725,6 +994,7 @@
 
             font-size: 12px;
         }
+
 
         nav ul {
             list-style: none;
@@ -739,6 +1009,7 @@
 
             padding: 4px 0;
         }
+
 
         nav a {
             color: var(--text-secondary);
@@ -762,15 +1033,18 @@
             position: relative;
         }
 
+
         nav a::after {
             content: "";
 
             position: absolute;
 
             bottom: -2px;
+
             right: 0;
 
             width: 0;
+
             height: 2px;
 
             background:
@@ -785,13 +1059,16 @@
             border-radius: 2px;
         }
 
+
         nav a:hover {
             color: var(--text-primary);
         }
 
+
         nav a:hover::after {
             width: 100%;
         }
+
 
         /* =========================================================
            MAIN
@@ -807,11 +1084,13 @@
             width: 100%;
         }
 
+
         section {
             padding: 70px 0;
 
             width: 100%;
         }
+
 
         /* =========================================================
            HERO
@@ -825,6 +1104,7 @@
             flex-direction: column;
 
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
@@ -832,12 +1112,14 @@
             position: relative;
         }
 
+
         .hero::before {
             content: "";
 
             position: absolute;
 
             width: 400px;
+
             height: 400px;
 
             border-radius: 50%;
@@ -853,10 +1135,13 @@
 
             z-index: -1;
 
-            animation: heroGlow 5s ease-in-out infinite;
+            animation:
+                heroGlow 5s ease-in-out infinite;
         }
 
+
         @keyframes heroGlow {
+
             0%,100% {
                 transform: scale(1);
             }
@@ -864,10 +1149,13 @@
             50% {
                 transform: scale(1.25);
             }
+
         }
 
+
         .hero h1 {
-            font-size: clamp(48px,12vw,90px);
+            font-size:
+                clamp(48px,12vw,90px);
 
             font-weight: 900;
 
@@ -882,7 +1170,9 @@
                 );
 
             -webkit-background-clip: text;
+
             background-clip: text;
+
             -webkit-text-fill-color: transparent;
 
             letter-spacing: -3px;
@@ -891,12 +1181,15 @@
 
             filter:
                 drop-shadow(
-                    0 0 60px rgba(96,165,250,0.2)
+                    0 0 60px
+                    rgba(96,165,250,0.2)
                 );
         }
 
+
         .hero .subtitle {
-            font-size: clamp(16px,2vw,22px);
+            font-size:
+                clamp(16px,2vw,22px);
 
             color: var(--text-secondary);
 
@@ -907,11 +1200,13 @@
             line-height: 1.8;
         }
 
+
         .hero .glow-text {
             color: var(--accent-1);
 
             font-weight: 600;
         }
+
 
         .hero-buttons {
             display: flex;
@@ -925,10 +1220,13 @@
             justify-content: center;
         }
 
+
         .btn {
             display: inline-flex;
 
             align-items: center;
+
+            justify-content: center;
 
             gap: 10px;
 
@@ -955,6 +1253,7 @@
             overflow: hidden;
         }
 
+
         .btn-primary {
             background:
                 linear-gradient(
@@ -966,29 +1265,41 @@
             color: white;
 
             box-shadow:
-                0 8px 30px rgba(96,165,250,0.3);
+                0 8px 30px
+                rgba(96,165,250,0.3);
         }
+
 
         .btn-primary:hover {
-            transform: translateY(-3px) scale(1.02);
+            transform:
+                translateY(-3px)
+                scale(1.02);
 
             box-shadow:
-                0 12px 40px rgba(96,165,250,0.5);
+                0 12px 40px
+                rgba(96,165,250,0.5);
         }
 
-        .btn-secondary {
-            background: rgba(255,255,255,0.06);
 
-            border: 1px solid var(--border-color);
+        .btn-secondary {
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid var(--border-color);
 
             color: var(--text-secondary);
         }
 
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.12);
 
-            transform: translateY(-3px);
+        .btn-secondary:hover {
+            background:
+                rgba(255,255,255,0.12);
+
+            transform:
+                translateY(-3px);
         }
+
 
         .btn::before {
             content: "";
@@ -996,9 +1307,11 @@
             position: absolute;
 
             top: 0;
+
             left: -100%;
 
             width: 100%;
+
             height: 100%;
 
             background:
@@ -1012,16 +1325,19 @@
             transition: left 0.6s;
         }
 
+
         .btn:hover::before {
             left: 100%;
         }
+
 
         /* =========================================================
            SECTION TITLE
         ========================================================= */
 
         .section-title {
-            font-size: clamp(28px,4vw,42px);
+            font-size:
+                clamp(28px,4vw,42px);
 
             font-weight: 800;
 
@@ -1037,9 +1353,12 @@
                 );
 
             -webkit-background-clip: text;
+
             background-clip: text;
+
             -webkit-text-fill-color: transparent;
         }
+
 
         .section-title::after {
             content: "";
@@ -1047,6 +1366,7 @@
             display: block;
 
             width: 70px;
+
             height: 3px;
 
             background:
@@ -1056,10 +1376,12 @@
                     var(--accent-2)
                 );
 
-            margin: 12px auto 0;
+            margin:
+                12px auto 0;
 
             border-radius: 3px;
         }
+
 
         /* =========================================================
            GRID / CARDS
@@ -1077,13 +1399,20 @@
             gap: 28px;
         }
 
+
         .card {
             background: var(--bg-card);
 
-            backdrop-filter: blur(20px) saturate(1.4);
-            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            backdrop-filter:
+                blur(20px)
+                saturate(1.4);
 
-            border: 1px solid var(--border-color);
+            -webkit-backdrop-filter:
+                blur(20px)
+                saturate(1.4);
+
+            border:
+                1px solid var(--border-color);
 
             border-radius: var(--radius);
 
@@ -1096,7 +1425,10 @@
             overflow: hidden;
 
             box-shadow: var(--shadow);
+
+            min-width: 0;
         }
+
 
         .card::before {
             content: "";
@@ -1104,9 +1436,11 @@
             position: absolute;
 
             top: 0;
+
             right: 0;
 
             width: 100%;
+
             height: 3px;
 
             background:
@@ -1122,19 +1456,23 @@
             transition: opacity 0.4s;
         }
 
+
         .card:hover {
             transform: translateY(-8px);
 
-            border-color: rgba(255,255,255,0.1);
+            border-color:
+                rgba(255,255,255,0.1);
 
             box-shadow:
                 var(--glow),
                 var(--shadow);
         }
 
+
         .card:hover::before {
             opacity: 1;
         }
+
 
         .card .icon {
             font-size: 36px;
@@ -1144,6 +1482,7 @@
             display: block;
         }
 
+
         .card h3 {
             font-size: 20px;
 
@@ -1152,13 +1491,17 @@
             color: var(--accent-1);
         }
 
+
         .card p {
             color: var(--text-secondary);
 
             font-size: 15px;
 
             line-height: 1.8;
+
+            overflow-wrap: anywhere;
         }
+
 
         .version-badge {
             display: inline-block;
@@ -1178,8 +1521,10 @@
 
             font-weight: 600;
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
         }
+
 
         .download-info {
             margin-top: 14px;
@@ -1188,6 +1533,7 @@
 
             font-size: 13px;
         }
+
 
         .status-badge {
             margin-top: 12px;
@@ -1205,6 +1551,7 @@
             gap: 6px;
         }
 
+
         .card .btn {
             margin-top: 16px;
 
@@ -1213,13 +1560,16 @@
             font-size: 14px;
         }
 
+
         .card.old {
             opacity: 0.5;
         }
 
+
         .card.old:hover {
             opacity: 1;
         }
+
 
         /* =========================================================
            NEWS
@@ -1228,6 +1578,7 @@
         .news-card {
             min-height: 250px;
         }
+
 
         .news-date {
             display: inline-flex;
@@ -1247,10 +1598,12 @@
 
             color: var(--text-muted);
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
 
             font-size: 12px;
         }
+
 
         .news-card h3 {
             font-size: 21px;
@@ -1258,9 +1611,11 @@
             margin-bottom: 12px;
         }
 
+
         .news-card .news-text {
             margin-bottom: 20px;
         }
+
 
         .news-tag {
             display: inline-block;
@@ -1274,11 +1629,13 @@
             background:
                 rgba(52,211,153,0.08);
 
-            border: 1px solid
+            border:
+                1px solid
                 rgba(52,211,153,0.15);
 
             font-size: 12px;
         }
+
 
         /* =========================================================
            TRAILERS
@@ -1289,6 +1646,7 @@
 
             overflow: hidden;
         }
+
 
         .trailer-video {
             width: 100%;
@@ -1302,17 +1660,21 @@
             background: #000;
         }
 
+
         .trailer-info {
             padding: 24px;
         }
+
 
         .trailer-info h3 {
             margin-bottom: 8px;
         }
 
+
         .trailer-info p {
             margin-bottom: 15px;
         }
+
 
         .trailer-placeholder {
             aspect-ratio: 16 / 9;
@@ -1320,6 +1682,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             flex-direction: column;
@@ -1338,9 +1701,15 @@
             font-size: 40px;
         }
 
+
         .trailer-placeholder span {
             font-size: 14px;
+
+            text-align: center;
+
+            padding: 0 15px;
         }
+
 
         /* =========================================================
            SOCIAL
@@ -1358,6 +1727,7 @@
             flex-wrap: wrap;
         }
 
+
         .social-links a {
             display: inline-flex;
 
@@ -1372,7 +1742,8 @@
             background:
                 rgba(255,255,255,0.04);
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
 
             color: var(--text-primary);
 
@@ -1385,6 +1756,7 @@
             font-size: 15px;
         }
 
+
         .social-links a:hover {
             background:
                 rgba(255,255,255,0.08);
@@ -1393,6 +1765,7 @@
 
             box-shadow: var(--glow);
         }
+
 
         /* =========================================================
            ABOUT
@@ -1411,6 +1784,7 @@
 
             line-height: 1.9;
         }
+
 
         /* =========================================================
            FOOTER
@@ -1432,6 +1806,7 @@
             font-size: 14px;
         }
 
+
         .footer-links {
             display: flex;
 
@@ -1444,6 +1819,7 @@
             flex-wrap: wrap;
         }
 
+
         .footer-links a {
             color: var(--text-secondary);
 
@@ -1452,9 +1828,11 @@
             transition: 0.3s;
         }
 
+
         .footer-links a:hover {
             color: var(--accent-1);
         }
+
 
         /* =========================================================
            MODAL
@@ -1475,21 +1853,25 @@
             z-index: 2000;
 
             align-items: center;
+
             justify-content: center;
 
             padding: 20px;
         }
 
+
         .modal.active {
             display: flex;
         }
+
 
         .modal-content {
             background: var(--bg-card);
 
             backdrop-filter: blur(24px);
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
 
             border-radius: var(--radius);
 
@@ -1499,12 +1881,19 @@
 
             width: 100%;
 
-            animation: slideUp 0.35s ease;
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            animation:
+                slideUp 0.35s ease;
 
             box-shadow: var(--shadow);
         }
 
+
         @keyframes slideUp {
+
             from {
                 transform:
                     translateY(30px)
@@ -1520,7 +1909,9 @@
 
                 opacity: 1;
             }
+
         }
+
 
         .modal-header {
             display: flex;
@@ -1532,11 +1923,13 @@
             margin-bottom: 20px;
         }
 
+
         .modal-title {
             font-size: 22px;
 
             font-weight: 700;
         }
+
 
         .close-btn {
             background: none;
@@ -1552,15 +1945,18 @@
             transition: var(--transition);
         }
 
+
         .close-btn:hover {
             color: var(--text-primary);
 
             transform: rotate(90deg);
         }
 
+
         .form-group {
             margin-bottom: 16px;
         }
+
 
         .form-group label {
             display: block;
@@ -1572,6 +1968,7 @@
             font-size: 13px;
         }
 
+
         .form-group input {
             width: 100%;
 
@@ -1579,7 +1976,8 @@
 
             border-radius: var(--radius-sm);
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
 
             background:
                 rgba(0,0,0,0.3);
@@ -1591,6 +1989,7 @@
             font-family: inherit;
         }
 
+
         .form-group input:focus {
             outline: none;
 
@@ -1601,6 +2000,7 @@
                 0 0 0 3px
                 rgba(96,165,250,0.1);
         }
+
 
         .submit-btn {
             width: 100%;
@@ -1631,6 +2031,7 @@
             font-family: inherit;
         }
 
+
         .submit-btn:hover {
             transform: translateY(-2px);
 
@@ -1638,6 +2039,7 @@
                 0 8px 25px
                 rgba(96,165,250,0.3);
         }
+
 
         .error-message {
             color: #ef4444;
@@ -1651,6 +2053,7 @@
             text-align: center;
         }
 
+
         .success-message {
             color: #34d399;
 
@@ -1663,6 +2066,7 @@
             text-align: center;
         }
 
+
         /* =========================================================
            TOAST
         ========================================================= */
@@ -1671,6 +2075,7 @@
             position: fixed;
 
             left: 25px;
+
             bottom: 25px;
 
             z-index: 999999;
@@ -1679,7 +2084,8 @@
 
             backdrop-filter: blur(20px);
 
-            border: 1px solid var(--border-color);
+            border:
+                1px solid var(--border-color);
 
             color: var(--text-primary);
 
@@ -1689,8 +2095,7 @@
 
             box-shadow: var(--shadow);
 
-            transform:
-                translateY(100px);
+            transform: translateY(100px);
 
             opacity: 0;
 
@@ -1701,12 +2106,13 @@
             font-size: 14px;
         }
 
+
         #toast.show {
-            transform:
-                translateY(0);
+            transform: translateY(0);
 
             opacity: 1;
         }
+
 
         /* =========================================================
            RESPONSIVE
@@ -1720,21 +2126,67 @@
 
         }
 
+
         @media (max-width: 768px) {
 
             header {
-                padding: 10px 14px;
+                padding: 8px 10px;
             }
 
+
             nav {
-                gap: 8px;
+                gap: 7px;
+
+                flex-direction: column;
+
+                align-items: stretch;
             }
+
 
             .nav-left {
                 width: 100%;
 
-                justify-content: space-between;
+                justify-content: center;
+
+                gap: 7px;
             }
+
+
+            .logo {
+                font-size: 21px;
+            }
+
+
+            .logo-icon {
+                font-size: 23px;
+            }
+
+
+            .theme-selector {
+                gap: 3px;
+
+                padding: 3px 6px;
+            }
+
+
+            .theme-dot {
+                width: 18px;
+
+                height: 18px;
+            }
+
+
+            .language-switcher {
+                padding: 3px;
+            }
+
+
+            .language-btn {
+                padding: 5px 8px;
+
+                font-size: 11px;
+            }
+
 
             .auth-buttons {
                 width: 100%;
@@ -1742,89 +2194,270 @@
                 justify-content: center;
             }
 
+
             nav ul {
-                justify-content: center;
-
-                gap: 14px;
-
                 width: 100%;
+
+                display: grid;
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+                gap: 5px;
+
+                padding: 0;
             }
+
+
+            nav ul li {
+                min-width: 0;
+            }
+
 
             nav a {
-                font-size: 13px;
+                justify-content: center;
+
+                font-size: 12px;
+
+                padding: 8px 3px;
+
+                background:
+                    rgba(255,255,255,0.03);
+
+                border:
+                    1px solid var(--border-color);
+
+                border-radius: 10px;
+
+                white-space: nowrap;
             }
+
+
+            nav a::after {
+                display: none;
+            }
+
+
+            main {
+                width: 100%;
+
+                padding: 0 12px;
+
+                overflow: hidden;
+            }
+
 
             section {
                 padding: 50px 0;
             }
 
+
             .hero {
                 min-height: 55vh;
+
+                width: 100%;
             }
+
 
             .hero h1 {
-                font-size: 40px;
+                font-size:
+                    clamp(34px,11vw,48px);
+
+                letter-spacing: -1px;
+
+                max-width: 100%;
             }
 
+
+            .hero .subtitle {
+                font-size: 15px;
+
+                padding: 0 8px;
+
+                line-height: 1.9;
+            }
+
+
+            .hero-buttons {
+                width: 100%;
+
+                padding: 0 8px;
+
+                gap: 10px;
+            }
+
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+
             .grid {
-                grid-template-columns: 1fr;
+                width: 100%;
+
+                grid-template-columns:
+                    minmax(0,1fr);
 
                 gap: 20px;
             }
 
-            .social-links {
-                gap: 12px;
+
+            .card {
+                width: 100%;
+
+                min-width: 0;
+
+                padding: 22px 18px;
             }
+
+
+            .section-title {
+                font-size:
+                    clamp(25px,8vw,36px);
+            }
+
+
+            .social-links {
+                width: 100%;
+
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                gap: 10px;
+            }
+
 
             .social-links a {
-                padding: 10px 18px;
+                width: 100%;
 
-                font-size: 14px;
+                justify-content: center;
             }
 
-            .theme-selector {
-                padding: 3px 8px;
+
+            .modal {
+                padding: 12px;
             }
 
-            .theme-dot {
-                width: 18px;
-                height: 18px;
+
+            .modal-content {
+                padding: 24px 18px;
+
+                max-height: 90vh;
+            }
+
+
+            #toast {
+                left: 12px;
+
+                right: 12px;
+
+                bottom: 12px;
+
+                text-align: center;
             }
 
         }
 
+
         @media (max-width: 480px) {
 
+            .nav-left {
+                gap: 5px;
+            }
+
+
             .logo {
+                width: 100%;
+
+                justify-content: center;
+
                 font-size: 20px;
             }
 
-            .logo-icon {
-                font-size: 22px;
+
+            .theme-selector {
+                order: 2;
             }
 
-            .auth-btn {
-                padding: 5px 12px;
 
-                font-size: 12px;
+            .language-switcher {
+                order: 3;
             }
+
+
+            .auth-buttons {
+                order: 4;
+            }
+
+
+            nav ul {
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+            }
+
+
+            nav ul a {
+                font-size: 11px;
+
+                gap: 3px;
+            }
+
 
             .hero h1 {
                 font-size: 32px;
             }
 
+
             .btn {
+                width: 100%;
+
                 padding: 10px 20px;
 
                 font-size: 13px;
             }
 
+
             .card {
                 padding: 22px 18px;
             }
 
+
             .preloader-bar {
                 width: 200px;
+            }
+
+
+            .preloader-text {
+                padding: 0 20px;
+
+                font-size: 11px;
+            }
+
+        }
+
+
+        @media (max-width: 350px) {
+
+            .language-btn {
+                padding:
+                    5px 6px;
+
+                font-size: 10px;
+            }
+
+
+            .theme-dot {
+                width: 16px;
+
+                height: 16px;
+            }
+
+
+            nav ul a {
+                font-size: 10px;
+
+                padding: 7px 2px;
             }
 
         }
@@ -1832,7 +2465,9 @@
     </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      PRELOADER
@@ -1848,17 +2483,26 @@
 
     </div>
 
+
     <div class="preloader-title">
         STAR LOOM
     </div>
 
-    <div class="preloader-text">
+
+    <div
+        class="preloader-text"
+        data-fa="در حال آماده‌سازی جهان استار لوم..."
+        data-en="Preparing the Star Loom universe...">
+
         در حال آماده‌سازی جهان استار لوم...
+
     </div>
+
 
     <div class="preloader-bar"></div>
 
 </div>
+
 
 
 <!-- =========================================================
@@ -1871,15 +2515,25 @@
 
         <div class="nav-left">
 
+
+            <!-- LOGO -->
+
             <a href="#home" class="logo">
 
                 <span class="logo-icon">
                     ⭐
                 </span>
 
-                استار لوم
+                <span
+                    data-fa="استار لوم"
+                    data-en="Star Loom">
+
+                    استار لوم
+
+                </span>
 
             </a>
+
 
 
             <!-- THEMES -->
@@ -1919,21 +2573,54 @@
             </div>
 
 
+
+            <!-- LANGUAGE -->
+
+            <div class="language-switcher">
+
+                <button
+                    class="language-btn active"
+                    data-lang="fa"
+                    onclick="changeLanguage('fa')">
+
+                    🇮🇷 فارسی
+
+                </button>
+
+
+                <button
+                    class="language-btn"
+                    data-lang="en"
+                    onclick="changeLanguage('en')">
+
+                    🇬🇧 English
+
+                </button>
+
+            </div>
+
+
+
             <!-- AUTH -->
 
             <div class="auth-buttons">
 
                 <button
                     class="auth-btn login-btn"
-                    onclick="showLogin()">
+                    onclick="showLogin()"
+                    data-fa="🔑 ورود"
+                    data-en="🔑 Login">
 
                     🔑 ورود
 
                 </button>
 
+
                 <button
                     class="auth-btn signup-btn"
-                    onclick="showSignup()">
+                    onclick="showSignup()"
+                    data-fa="✨ ثبت نام"
+                    data-en="✨ Sign Up">
 
                     ✨ ثبت نام
 
@@ -1952,6 +2639,7 @@
 
                     </div>
 
+
                     <span
                         class="user-name"
                         id="userName">
@@ -1960,9 +2648,12 @@
 
                     </span>
 
+
                     <button
                         class="logout-btn"
-                        onclick="logout()">
+                        onclick="logout()"
+                        data-fa="🚪 خروج"
+                        data-en="🚪 Logout">
 
                         🚪 خروج
 
@@ -1975,49 +2666,91 @@
         </div>
 
 
+
         <!-- NAVIGATION -->
 
         <ul>
 
             <li>
-                <a href="#home">
+                <a
+                    href="#home"
+                    data-fa="🏠 خانه"
+                    data-en="🏠 Home">
+
                     🏠 خانه
+
                 </a>
             </li>
 
+
             <li>
-                <a href="#games">
+                <a
+                    href="#games"
+                    data-fa="🎮 بازی‌ها"
+                    data-en="🎮 Games">
+
                     🎮 بازی‌ها
+
                 </a>
             </li>
 
+
             <li>
-                <a href="#news">
+                <a
+                    href="#news"
+                    data-fa="📰 اخبار"
+                    data-en="📰 News">
+
                     📰 اخبار
+
                 </a>
             </li>
 
+
             <li>
-                <a href="#trailers">
+                <a
+                    href="#trailers"
+                    data-fa="🎬 تریلرها"
+                    data-en="🎬 Trailers">
+
                     🎬 تریلرها
+
                 </a>
             </li>
 
+
             <li>
-                <a href="#engine">
+                <a
+                    href="#engine"
+                    data-fa="⚙️ موتور لوم"
+                    data-en="⚙️ Loom Engine">
+
                     ⚙️ موتور لوم
+
                 </a>
             </li>
 
+
             <li>
-                <a href="#software">
+                <a
+                    href="#software"
+                    data-fa="💻 نرم‌افزار"
+                    data-en="💻 Software">
+
                     💻 نرم‌افزار
+
                 </a>
             </li>
 
+
             <li>
-                <a href="#about">
+                <a
+                    href="#about"
+                    data-fa="ℹ️ درباره ما"
+                    data-en="ℹ️ About Us">
+
                     ℹ️ درباره ما
+
                 </a>
             </li>
 
@@ -2026,6 +2759,7 @@
     </nav>
 
 </header>
+
 
 
 <!-- =========================================================
@@ -2040,9 +2774,15 @@
 
         <div class="modal-header">
 
-            <h3 class="modal-title">
+            <h3
+                class="modal-title"
+                data-fa="🔑 ورود به حساب"
+                data-en="🔑 Login">
+
                 🔑 ورود به حساب
+
             </h3>
+
 
             <button
                 class="close-btn"
@@ -2059,13 +2799,19 @@
 
             <div class="form-group">
 
-                <label>
+                <label
+                    data-fa="ایمیل یا نام کاربری"
+                    data-en="Email or Username">
+
                     ایمیل یا نام کاربری
+
                 </label>
+
 
                 <input
                     type="text"
                     id="loginEmail"
+                    autocomplete="username"
                     required>
 
             </div>
@@ -2073,13 +2819,19 @@
 
             <div class="form-group">
 
-                <label>
+                <label
+                    data-fa="رمز عبور"
+                    data-en="Password">
+
                     رمز عبور
+
                 </label>
+
 
                 <input
                     type="password"
                     id="loginPassword"
+                    autocomplete="current-password"
                     required>
 
             </div>
@@ -2087,7 +2839,9 @@
 
             <button
                 type="submit"
-                class="submit-btn">
+                class="submit-btn"
+                data-fa="ورود"
+                data-en="Login">
 
                 ورود
 
@@ -2096,7 +2850,9 @@
 
             <p
                 class="error-message"
-                id="loginError">
+                id="loginError"
+                data-fa="❌ اطلاعات وارد شده صحیح نیست"
+                data-en="❌ The entered information is incorrect">
 
                 ❌ اطلاعات وارد شده صحیح نیست
 
@@ -2107,6 +2863,7 @@
     </div>
 
 </div>
+
 
 
 <!-- =========================================================
@@ -2121,9 +2878,15 @@
 
         <div class="modal-header">
 
-            <h3 class="modal-title">
+            <h3
+                class="modal-title"
+                data-fa="✨ ساخت حساب"
+                data-en="✨ Create Account">
+
                 ✨ ساخت حساب
+
             </h3>
+
 
             <button
                 class="close-btn"
@@ -2138,66 +2901,97 @@
 
         <form onsubmit="signup(event)">
 
+
             <div class="form-group">
 
-                <label>
+                <label
+                    data-fa="نام کامل"
+                    data-en="Full Name">
+
                     نام کامل
+
                 </label>
+
 
                 <input
                     type="text"
                     id="signupName"
+                    autocomplete="name"
                     required>
 
             </div>
 
 
+
             <div class="form-group">
 
-                <label>
+                <label
+                    data-fa="ایمیل"
+                    data-en="Email">
+
                     ایمیل
+
                 </label>
+
 
                 <input
                     type="email"
                     id="signupEmail"
+                    autocomplete="email"
                     required>
 
             </div>
 
 
+
             <div class="form-group">
 
-                <label>
+                <label
+                    data-fa="نام کاربری"
+                    data-en="Username">
+
                     نام کاربری
+
                 </label>
+
 
                 <input
                     type="text"
                     id="signupUsername"
+                    autocomplete="username"
                     required>
 
             </div>
 
 
+
             <div class="form-group">
 
-                <label>
+                <label
+                    data-fa="رمز عبور"
+                    data-en="Password">
+
                     رمز عبور
+
                 </label>
+
 
                 <input
                     type="password"
                     id="signupPassword"
+                    autocomplete="new-password"
                     required
                     minlength="6">
 
             </div>
 
 
+
             <button
                 type="submit"
-                class="submit-btn">
+                class="submit-btn"
+                data-fa="ایجاد حساب"
+                data-en="Create Account">
 
                 ایجاد حساب
 
@@ -2206,7 +3000,9 @@
 
             <p
                 class="error-message"
-                id="signupError">
+                id="signupError"
+                data-fa="❌ این ایمیل یا نام کاربری قبلاً ثبت شده است"
+                data-en="❌ This email or username is already registered">
 
                 ❌ این ایمیل یا نام کاربری قبلاً ثبت شده است
 
@@ -2215,7 +3011,9 @@
 
             <p
                 class="success-message"
-                id="signupSuccess">
+                id="signupSuccess"
+                data-fa="✅ حساب شما با موفقیت ایجاد شد!"
+                data-en="✅ Your account was created successfully!">
 
                 ✅ حساب شما با موفقیت ایجاد شد!
 
@@ -2226,6 +3024,7 @@
     </div>
 
 </div>
+
 
 
 <!-- =========================================================
@@ -2241,20 +3040,46 @@
         id="home"
         class="hero">
 
-        <h1>
+        <h1
+            data-fa="استار لوم"
+            data-en="Star Loom">
+
             استار لوم
+
         </h1>
+
 
         <p class="subtitle">
 
-            دنیایی برای
-            <span class="glow-text">
-                بازی‌ها، نرم‌افزار و خلاقیت
+            <span
+                data-fa="دنیایی برای"
+                data-en="A world for">
+
+                دنیایی برای
+
             </span>
+
+
+            <span
+                class="glow-text"
+                data-fa="بازی‌ها، نرم‌افزار و خلاقیت"
+                data-en="Games, Software & Creativity">
+
+                بازی‌ها، نرم‌افزار و خلاقیت
+
+            </span>
+
 
             <br>
 
-            ساخته شده با عشق توسط Star_Loom
+
+            <span
+                data-fa="ساخته شده با عشق توسط Star_Loom"
+                data-en="Made with passion by Star_Loom">
+
+                ساخته شده با عشق توسط Star_Loom
+
+            </span>
 
         </p>
 
@@ -2263,7 +3088,9 @@
 
             <a
                 href="#engine"
-                class="btn btn-primary">
+                class="btn btn-primary"
+                data-fa="🚀 کاوش موتور لوم"
+                data-en="🚀 Explore Loom Engine">
 
                 🚀 کاوش موتور لوم
 
@@ -2272,7 +3099,9 @@
 
             <a
                 href="#trailers"
-                class="btn btn-secondary">
+                class="btn btn-secondary"
+                data-fa="🎬 تماشای تریلرها"
+                data-en="🎬 Watch Trailers">
 
                 🎬 تماشای تریلرها
 
@@ -2283,18 +3112,25 @@
     </section>
 
 
+
     <!-- =====================================================
          GAMES
     ====================================================== -->
 
     <section id="games">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-fa="🎮 بازی‌ها"
+            data-en="🎮 Games">
+
             🎮 بازی‌ها
+
         </h2>
 
 
         <div class="grid">
+
 
             <div class="card">
 
@@ -2302,11 +3138,19 @@
                     🎯
                 </span>
 
-                <h3>
+
+                <h3
+                    data-fa="بازی‌های استار لوم"
+                    data-en="Star Loom Games">
+
                     بازی‌های استار لوم
+
                 </h3>
 
-                <p>
+
+                <p
+                    data-fa="بازی‌ها و پروژه‌های تعاملی ساخته شده توسط Star_Loom را کشف کنید. از پروژه‌های کوچک تا تجربه‌های بزرگ‌تر."
+                    data-en="Discover games and interactive projects created by Star_Loom. From small projects to larger experiences.">
 
                     بازی‌ها و پروژه‌های تعاملی ساخته شده توسط
                     Star_Loom را کشف کنید.
@@ -2318,17 +3162,26 @@
             </div>
 
 
+
             <div class="card">
 
                 <span class="icon">
                     🚀
                 </span>
 
-                <h3>
+
+                <h3
+                    data-fa="پروژه‌های در دست ساخت"
+                    data-en="Projects in Development">
+
                     پروژه‌های در دست ساخت
+
                 </h3>
 
-                <p>
+
+                <p
+                    data-fa="پروژه‌های فعلی و آینده استار لوم را دنبال کنید و از آخرین پیشرفت‌ها باخبر شوید."
+                    data-en="Follow Star Loom's current and upcoming projects and stay updated with the latest progress.">
 
                     پروژه‌های فعلی و آینده استار لوم را دنبال کنید
                     و از آخرین پیشرفت‌ها باخبر شوید.
@@ -2342,14 +3195,20 @@
     </section>
 
 
+
     <!-- =====================================================
          NEWS
     ====================================================== -->
 
     <section id="news">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-fa="📰 اخبار Star_Loom"
+            data-en="📰 Star_Loom News">
+
             📰 اخبار Star_Loom
+
         </h2>
 
 
@@ -2357,11 +3216,10 @@
             class="grid"
             id="newsContainer">
 
-            <!-- JS -->
-
         </div>
 
     </section>
+
 
 
     <!-- =====================================================
@@ -2370,8 +3228,13 @@
 
     <section id="trailers">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-fa="🎬 تریلر بازی‌ها"
+            data-en="🎬 Game Trailers">
+
             🎬 تریلر بازی‌ها
+
         </h2>
 
 
@@ -2379,11 +3242,10 @@
             class="grid"
             id="trailersContainer">
 
-            <!-- JS -->
-
         </div>
 
     </section>
+
 
 
     <!-- =====================================================
@@ -2392,8 +3254,13 @@
 
     <section id="engine">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-fa="⚙️ موتور لوم"
+            data-en="⚙️ Loom Engine">
+
             ⚙️ موتور لوم
+
         </h2>
 
 
@@ -2406,18 +3273,30 @@
                     ⚡
                 </span>
 
-                <h3>
+
+                <h3
+                    data-fa="لوم انجین 1.6"
+                    data-en="Loom Engine 1.6">
+
                     لوم انجین 1.6
+
                 </h3>
 
-                <span class="version-badge">
+
+                <span
+                    class="version-badge"
+                    data-fa="🔹 نسخه 1.6 • جدیدترین"
+                    data-en="🔹 Version 1.6 • Latest">
 
                     🔹 نسخه 1.6 • جدیدترین
 
                 </span>
 
 
-                <p style="margin-top:14px;">
+                <p
+                    style="margin-top:14px;"
+                    data-fa="جدیدترین نسخه موتور بازی لوم — قدرتمند، سبک و رایگان برای توسعه بازی‌های ویندوز."
+                    data-en="The latest version of Loom Engine — powerful, lightweight and free for Windows game development.">
 
                     جدیدترین نسخه موتور بازی لوم —
                     قدرتمند، سبک و رایگان برای توسعه بازی‌های ویندوز.
@@ -2429,21 +3308,29 @@
                     href="https://github.com/StarLoom325/StarLoom/releases/download/v1.6/LoomEngine_1.6.exe"
                     class="btn btn-primary"
                     target="_blank"
-                    rel="noopener">
+                    rel="noopener"
+                    data-fa="⬇ دانلود موتور لوم 1.6"
+                    data-en="⬇ Download Loom Engine 1.6">
 
                     ⬇ دانلود موتور لوم 1.6
 
                 </a>
 
 
-                <p class="download-info">
+                <p
+                    class="download-info"
+                    data-fa="📦 ویندوز • EXE • 45.5 مگابایت • رایگان"
+                    data-en="📦 Windows • EXE • 45.5 MB • Free">
 
                     📦 ویندوز • EXE • 45.5 مگابایت • رایگان
 
                 </p>
 
 
-                <p class="status-badge">
+                <p
+                    class="status-badge"
+                    data-fa="✅ انتشار رسمی استار لوم"
+                    data-en="✅ Official Star Loom Release">
 
                     ✅ انتشار رسمی استار لوم
 
@@ -2452,28 +3339,48 @@
             </div>
 
 
+
             <div class="card old">
 
                 <span class="icon">
                     📦
                 </span>
 
-                <h3>
+
+                <h3
+                    data-fa="لوم انجین 0.2"
+                    data-en="Loom Engine 0.2">
+
                     لوم انجین 0.2
+
                 </h3>
 
-                <span class="version-badge">
+
+                <span
+                    class="version-badge"
+                    data-fa="📂 بایگانی شده"
+                    data-en="📂 Archived">
+
                     📂 بایگانی شده
+
                 </span>
 
-                <p style="margin-top:14px;">
+
+                <p
+                    style="margin-top:14px;"
+                    data-fa="نسخه اولیه موتور لوم — برای اهداف تاریخی و توسعه‌دهندگان قدیمی."
+                    data-en="The early version of Loom Engine — kept for historical purposes and legacy developers.">
 
                     نسخه اولیه موتور لوم —
                     برای اهداف تاریخی و توسعه‌دهندگان قدیمی.
 
                 </p>
 
-                <p class="download-info">
+
+                <p
+                    class="download-info"
+                    data-fa="⚠️ این نسخه با نسخه 1.6 جایگزین شده است."
+                    data-en="⚠️ This version has been replaced by version 1.6.">
 
                     ⚠️ این نسخه با نسخه 1.6 جایگزین شده است.
 
@@ -2481,10 +3388,10 @@
 
             </div>
 
-
         </div>
 
     </section>
+
 
 
     <!-- =====================================================
@@ -2493,8 +3400,13 @@
 
     <section id="software">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-fa="💻 نرم‌افزار"
+            data-en="💻 Software">
+
             💻 نرم‌افزار
+
         </h2>
 
 
@@ -2507,11 +3419,19 @@
                     🛠️
                 </span>
 
-                <h3>
+
+                <h3
+                    data-fa="ابزارهای استار لوم"
+                    data-en="Star Loom Tools">
+
                     ابزارهای استار لوم
+
                 </h3>
 
-                <p>
+
+                <p
+                    data-fa="نرم‌افزارها و ابزارهای توسعه‌ای ساخته شده توسط استار لوم برای کمک به سازندگان."
+                    data-en="Development software and tools created by Star Loom to help creators.">
 
                     نرم‌افزارها و ابزارهای توسعه‌ای
                     ساخته شده توسط استار لوم برای کمک به سازندگان.
@@ -2521,17 +3441,26 @@
             </div>
 
 
+
             <div class="card">
 
                 <span class="icon">
                     🧩
                 </span>
 
-                <h3>
+
+                <h3
+                    data-fa="پلاگین‌ها و افزونه‌ها"
+                    data-en="Plugins & Extensions">
+
                     پلاگین‌ها و افزونه‌ها
+
                 </h3>
 
-                <p>
+
+                <p
+                    data-fa="افزونه‌های کاربردی برای موتور لوم و سایر ابزارهای توسعه بازی."
+                    data-en="Useful plugins and extensions for Loom Engine and other game development tools.">
 
                     افزونه‌های کاربردی برای موتور لوم
                     و سایر ابزارهای توسعه بازی.
@@ -2540,10 +3469,10 @@
 
             </div>
 
-
         </div>
 
     </section>
+
 
 
     <!-- =====================================================
@@ -2552,12 +3481,20 @@
 
     <section id="about">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-fa="ℹ️ درباره استار لوم"
+            data-en="ℹ️ About Star Loom">
+
             ℹ️ درباره استار لوم
+
         </h2>
 
 
-        <p class="about-text">
+        <p
+            class="about-text"
+            data-fa="استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است که با هدف ساخت بازی‌های خلاقانه، ابزارهای مفید و موتور بازی لوم فعالیت می‌کند."
+            data-en="Star Loom is an independent game and software development project focused on creating creative games, useful tools, and the Loom Engine.">
 
             استار لوم یک پروژه مستقل توسعه بازی و نرم‌افزار است
             که با هدف ساخت
@@ -2580,9 +3517,16 @@
 
             <br><br>
 
-            ما به آزادی، خلاقیت و اشتراک‌گذاری دانش باور داریم.
+            <span
+                data-fa="ما به آزادی، خلاقیت و اشتراک‌گذاری دانش باور داریم."
+                data-en="We believe in freedom, creativity, and sharing knowledge.">
+
+                ما به آزادی، خلاقیت و اشتراک‌گذاری دانش باور داریم.
+
+            </span>
 
         </p>
+
 
 
         <!-- SOCIAL -->
@@ -2593,7 +3537,9 @@
             <a
                 href="https://rubika.ir/joinc/FFEBECDA0DAJDJEWKKSMCBTXYCWKJDNV"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                data-fa="📱 روبیکا"
+                data-en="📱 Rubika">
 
                 📱 روبیکا
 
@@ -2603,7 +3549,9 @@
             <a
                 href="https://aparat.com/StarLoom"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                data-fa="🎬 آپارات"
+                data-en="🎬 Aparat">
 
                 🎬 آپارات
 
@@ -2613,19 +3561,20 @@
             <a
                 href="https://github.com/StarLoom325"
                 target="_blank"
-                rel="noopener">
+                rel="noopener"
+                data-fa="🐙 گیت‌هاب"
+                data-en="🐙 GitHub">
 
                 🐙 گیت‌هاب
 
             </a>
 
-
         </div>
 
     </section>
 
-
 </main>
+
 
 
 <!-- =========================================================
@@ -2636,34 +3585,71 @@
 
     <div class="footer-links">
 
-        <a href="#home">
+        <a
+            href="#home"
+            data-fa="خانه"
+            data-en="Home">
+
             خانه
+
         </a>
 
-        <a href="#games">
+
+        <a
+            href="#games"
+            data-fa="بازی‌ها"
+            data-en="Games">
+
             بازی‌ها
+
         </a>
 
-        <a href="#news">
+
+        <a
+            href="#news"
+            data-fa="اخبار"
+            data-en="News">
+
             اخبار
+
         </a>
 
-        <a href="#trailers">
+
+        <a
+            href="#trailers"
+            data-fa="تریلرها"
+            data-en="Trailers">
+
             تریلرها
+
         </a>
 
-        <a href="#engine">
+
+        <a
+            href="#engine"
+            data-fa="Loom Engine"
+            data-en="Loom Engine">
+
             Loom Engine
+
         </a>
 
-        <a href="#about">
+
+        <a
+            href="#about"
+            data-fa="درباره ما"
+            data-en="About Us">
+
             درباره ما
+
         </a>
 
     </div>
 
 
-    <p>
+    <p
+        data-fa="© 2026 استار لوم. تمامی حقوق محفوظ است."
+        data-en="© 2026 Star Loom. All rights reserved.">
 
         © 2026 استار لوم.
         تمامی حقوق محفوظ است.
@@ -2673,9 +3659,11 @@
 </footer>
 
 
+
 <!-- TOAST -->
 
 <div id="toast"></div>
+
 
 
 <!-- =========================================================
@@ -2712,6 +3700,117 @@ window.addEventListener('load', () => {
 });
 
 
+
+/* ============================================================
+   LANGUAGE SYSTEM
+============================================================ */
+
+let currentLanguage =
+    localStorage.getItem('starLoomLanguage') ||
+    'fa';
+
+
+const languageButtons =
+    document.querySelectorAll('.language-btn');
+
+
+function changeLanguage(language) {
+
+    if (
+        language !== 'fa' &&
+        language !== 'en'
+    ) {
+
+        language = 'fa';
+
+    }
+
+
+    currentLanguage = language;
+
+
+    localStorage.setItem(
+        'starLoomLanguage',
+        language
+    );
+
+
+    /* PAGE DIRECTION */
+
+    if (language === 'fa') {
+
+        document.documentElement.lang = 'fa';
+
+        document.documentElement.dir = 'rtl';
+
+    }
+
+    else {
+
+        document.documentElement.lang = 'en';
+
+        document.documentElement.dir = 'ltr';
+
+    }
+
+
+    /* TRANSLATE STATIC ELEMENTS */
+
+    document
+        .querySelectorAll(
+            '[data-fa][data-en]'
+        )
+        .forEach(element => {
+
+            const translation =
+                language === 'fa'
+                    ? element.dataset.fa
+                    : element.dataset.en;
+
+
+            if (
+                element.children.length === 0
+            ) {
+
+                element.textContent =
+                    translation;
+
+            }
+
+        });
+
+
+    /* UPDATE LANGUAGE BUTTONS */
+
+    languageButtons.forEach(button => {
+
+        button.classList.toggle(
+            'active',
+            button.dataset.lang === language
+        );
+
+    });
+
+
+    /* RENDER DYNAMIC CONTENT */
+
+    renderNews();
+
+    renderTrailers();
+
+
+    /* TOAST */
+
+    showToast(
+        language === 'fa'
+            ? '🇮🇷 زبان فارسی فعال شد'
+            : '🇬🇧 English language enabled'
+    );
+
+}
+
+
+
 /* ============================================================
    TOAST
 ============================================================ */
@@ -2721,9 +3820,12 @@ function showToast(message) {
     const toast =
         document.getElementById('toast');
 
+
     toast.textContent = message;
 
+
     toast.classList.add('show');
+
 
     setTimeout(() => {
 
@@ -2734,12 +3836,14 @@ function showToast(message) {
 }
 
 
+
 /* ============================================================
    THEMES
 ============================================================ */
 
 const themeDots =
     document.querySelectorAll('.theme-dot');
+
 
 const html =
     document.documentElement;
@@ -2750,81 +3854,22 @@ const savedTheme =
     'galaxy';
 
 
-applyTheme(savedTheme);
-
-
-themeDots.forEach(dot => {
-
-    dot.addEventListener(
-        'click',
-        function() {
-
-            const theme =
-                this.dataset.theme;
-
-            applyTheme(theme);
-
-            localStorage.setItem(
-                'starLoomTheme',
-                theme
-            );
-
-
-            /*
-             * اگر کاربر وارد حساب باشد،
-             * تم حساب نیز ذخیره می‌شود.
-             */
-
-            if (currentUser) {
-
-                currentUser.theme = theme;
-
-                const index =
-                    users.findIndex(
-                        u => u.id === currentUser.id
-                    );
-
-                if (index !== -1) {
-
-                    users[index].theme =
-                        theme;
-
-                    localStorage.setItem(
-                        'starLoomUsers',
-                        JSON.stringify(users)
-                    );
-
-                    localStorage.setItem(
-                        'starLoomCurrentUser',
-                        JSON.stringify(currentUser)
-                    );
-
-                }
-
-            }
-
-            showToast(
-                '🎨 تم سایت تغییر کرد'
-            );
-
-        }
-    );
-
-});
-
-
 function applyTheme(theme) {
 
     const allowedThemes = [
+
         'galaxy',
         'ocean',
         'aurora',
         'forest',
         'sunset'
+
     ];
 
 
-    if (!allowedThemes.includes(theme)) {
+    if (
+        !allowedThemes.includes(theme)
+    ) {
 
         theme = 'galaxy';
 
@@ -2849,13 +3894,86 @@ function applyTheme(theme) {
 }
 
 
+applyTheme(savedTheme);
+
+
+themeDots.forEach(dot => {
+
+    dot.addEventListener(
+        'click',
+        function() {
+
+            const theme =
+                this.dataset.theme;
+
+
+            applyTheme(theme);
+
+
+            localStorage.setItem(
+                'starLoomTheme',
+                theme
+            );
+
+
+            if (currentUser) {
+
+                currentUser.theme =
+                    theme;
+
+
+                const index =
+                    users.findIndex(
+                        u =>
+                            u.id ===
+                            currentUser.id
+                    );
+
+
+                if (index !== -1) {
+
+                    users[index].theme =
+                        theme;
+
+
+                    localStorage.setItem(
+                        'starLoomUsers',
+                        JSON.stringify(users)
+                    );
+
+
+                    localStorage.setItem(
+                        'starLoomCurrentUser',
+                        JSON.stringify(currentUser)
+                    );
+
+                }
+
+            }
+
+
+            showToast(
+                currentLanguage === 'fa'
+                    ? '🎨 تم سایت تغییر کرد'
+                    : '🎨 Theme changed'
+            );
+
+        }
+    );
+
+});
+
+
+
 /* ============================================================
    AUTH SYSTEM
 ============================================================ */
 
 let users =
     JSON.parse(
-        localStorage.getItem('starLoomUsers') ||
+        localStorage.getItem(
+            'starLoomUsers'
+        ) ||
         '[]'
     );
 
@@ -2869,8 +3987,9 @@ let currentUser =
     );
 
 
+
 /* ============================================================
-   LOGIN
+   LOGIN / SIGNUP MODALS
 ============================================================ */
 
 function showLogin() {
@@ -2878,6 +3997,7 @@ function showLogin() {
     document
         .getElementById('loginModal')
         .classList.add('active');
+
 
     document
         .getElementById('loginError')
@@ -2892,9 +4012,11 @@ function showSignup() {
         .getElementById('signupModal')
         .classList.add('active');
 
+
     document
         .getElementById('signupError')
         .style.display = 'none';
+
 
     document
         .getElementById('signupSuccess')
@@ -2910,6 +4032,7 @@ function closeModal(modalId) {
         .classList.remove('active');
 
 }
+
 
 
 /* ============================================================
@@ -2976,9 +4099,11 @@ function signup(event) {
             .getElementById('signupError')
             .style.display = 'block';
 
+
         document
             .getElementById('signupSuccess')
             .style.display = 'none';
+
 
         return;
 
@@ -3000,7 +4125,8 @@ function signup(event) {
         theme:
             localStorage.getItem(
                 'starLoomTheme'
-            ) || 'galaxy',
+            ) ||
+            'galaxy',
 
         createdAt:
             new Date().toISOString()
@@ -3028,7 +4154,9 @@ function signup(event) {
 
 
     showToast(
-        '✨ حساب شما ساخته شد'
+        currentLanguage === 'fa'
+            ? '✨ حساب شما ساخته شد'
+            : '✨ Your account was created'
     );
 
 
@@ -3036,21 +4164,26 @@ function signup(event) {
 
         closeModal('signupModal');
 
+
         document
             .getElementById('signupName')
             .value = '';
+
 
         document
             .getElementById('signupEmail')
             .value = '';
 
+
         document
             .getElementById('signupUsername')
             .value = '';
 
+
         document
             .getElementById('signupPassword')
             .value = '';
+
 
         document
             .getElementById('signupSuccess')
@@ -3061,8 +4194,9 @@ function signup(event) {
 }
 
 
+
 /* ============================================================
-   LOGIN FUNCTION
+   LOGIN
 ============================================================ */
 
 function login(event) {
@@ -3088,9 +4222,13 @@ function login(event) {
         users.find(
             u =>
                 (
-                    u.email.toLowerCase() === email ||
-                    u.username.toLowerCase() === email
+                    u.email.toLowerCase() ===
+                        email ||
+
+                    u.username.toLowerCase() ===
+                        email
                 ) &&
+
                 u.password === password
         );
 
@@ -3121,13 +4259,10 @@ function login(event) {
     updateUserInterface();
 
 
-    /*
-     * اعمال تم ذخیره شده حساب
-     */
-
     if (user.theme) {
 
         applyTheme(user.theme);
+
 
         localStorage.setItem(
             'starLoomTheme',
@@ -3141,9 +4276,11 @@ function login(event) {
         .getElementById('loginEmail')
         .value = '';
 
+
     document
         .getElementById('loginPassword')
         .value = '';
+
 
     document
         .getElementById('loginError')
@@ -3151,11 +4288,13 @@ function login(event) {
 
 
     showToast(
-        '👋 خوش آمدید ' +
-        user.name
+        currentLanguage === 'fa'
+            ? '👋 خوش آمدید ' + user.name
+            : '👋 Welcome ' + user.name
     );
 
 }
+
 
 
 /* ============================================================
@@ -3166,17 +4305,23 @@ function logout() {
 
     currentUser = null;
 
+
     localStorage.removeItem(
         'starLoomCurrentUser'
     );
 
+
     updateUserInterface();
 
+
     showToast(
-        '🚪 از حساب خارج شدید'
+        currentLanguage === 'fa'
+            ? '🚪 از حساب خارج شدید'
+            : '🚪 You have been logged out'
     );
 
 }
+
 
 
 /* ============================================================
@@ -3246,12 +4391,9 @@ function updateUserInterface() {
 }
 
 
+
 /* ============================================================
    NEWS DATA
-   ============================================================
-
-   برای اضافه کردن خبر جدید،
-   یک مورد جدید به این آرایه اضافه کن.
 ============================================================ */
 
 const news = [
@@ -3259,54 +4401,103 @@ const news = [
     {
         icon: "🚀",
 
-        title:
-            "نسخه جدید Loom Engine در راه است",
+        fa: {
+            title:
+                "نسخه جدید Loom Engine در راه است",
 
-        date:
-            "27 مرداد 1405",
+            date:
+                "27 مرداد 1405",
 
-        text:
-            "توسعه نسخه‌های جدید Loom Engine ادامه دارد و امکانات بیشتری برای ساخت بازی‌های 2D و 3D در نظر گرفته شده است.",
+            text:
+                "توسعه نسخه‌های جدید Loom Engine ادامه دارد و امکانات بیشتری برای ساخت بازی‌های 2D و 3D در نظر گرفته شده است.",
 
-        tag:
-            "Loom Engine"
+            tag:
+                "Loom Engine"
+        },
+
+        en: {
+            title:
+                "A new version of Loom Engine is coming",
+
+            date:
+                "August 18, 2026",
+
+            text:
+                "Development of new Loom Engine versions continues with more features planned for creating 2D and 3D games.",
+
+            tag:
+                "Loom Engine"
+        }
     },
 
 
     {
         icon: "🎮",
 
-        title:
-            "پروژه‌های جدید Star_Loom",
+        fa: {
+            title:
+                "پروژه‌های جدید Star_Loom",
 
-        date:
-            "تابستان 1405",
+            date:
+                "تابستان 1405",
 
-        text:
-            "توسعه پروژه‌های جدید بازی Star_Loom ادامه دارد. به‌زودی اطلاعات و تصاویر بیشتری از پروژه‌ها منتشر خواهد شد.",
+            text:
+                "توسعه پروژه‌های جدید بازی Star_Loom ادامه دارد. به‌زودی اطلاعات و تصاویر بیشتری از پروژه‌ها منتشر خواهد شد.",
 
-        tag:
-            "بازی"
+            tag:
+                "بازی"
+        },
+
+        en: {
+            title:
+                "New Star_Loom Projects",
+
+            date:
+                "Summer 2026",
+
+            text:
+                "Development of new Star_Loom game projects continues. More information and images will be released soon.",
+
+            tag:
+                "Games"
+        }
     },
 
 
     {
         icon: "⭐",
 
-        title:
-            "به سایت رسمی Star_Loom خوش آمدید",
+        fa: {
+            title:
+                "به سایت رسمی Star_Loom خوش آمدید",
 
-        date:
-            "2026",
+            date:
+                "2026",
 
-        text:
-            "سایت Star_Loom محلی برای انتشار بازی‌ها، نرم‌افزارها، اخبار، تریلرها و پروژه‌های جدید است.",
+            text:
+                "سایت Star_Loom محلی برای انتشار بازی‌ها، نرم‌افزارها، اخبار، تریلرها و پروژه‌های جدید است.",
 
-        tag:
-            "Star_Loom"
+            tag:
+                "Star_Loom"
+        },
+
+        en: {
+            title:
+                "Welcome to the official Star_Loom website",
+
+            date:
+                "2026",
+
+            text:
+                "The Star_Loom website is a place for publishing games, software, news, trailers, and new projects.",
+
+            tag:
+                "Star_Loom"
+        }
     }
 
 ];
+
 
 
 /* ============================================================
@@ -3322,68 +4513,86 @@ function renderNews() {
 
 
     container.innerHTML =
-        news.map(item => `
+        news.map(item => {
 
-            <article class="card news-card">
+            const data =
+                currentLanguage === 'fa'
+                    ? item.fa
+                    : item.en;
 
-                <span class="icon">
-                    ${item.icon}
-                </span>
 
-                <div class="news-date">
+            return `
 
-                    <i class="fa-regular fa-calendar"></i>
+                <article class="card news-card">
 
-                    ${item.date}
+                    <span class="icon">
+                        ${item.icon}
+                    </span>
 
-                </div>
+                    <div class="news-date">
 
-                <h3>
-                    ${item.title}
-                </h3>
+                        <i class="fa-regular fa-calendar"></i>
 
-                <p class="news-text">
-                    ${item.text}
-                </p>
+                        ${data.date}
 
-                <span class="news-tag">
-                    ${item.tag}
-                </span>
+                    </div>
 
-            </article>
+                    <h3>
+                        ${data.title}
+                    </h3>
 
-        `).join('');
+                    <p class="news-text">
+                        ${data.text}
+                    </p>
+
+                    <span class="news-tag">
+                        ${data.tag}
+                    </span>
+
+                </article>
+
+            `;
+
+        }).join('');
 
 }
 
 
-renderNews();
-
 
 /* ============================================================
    TRAILERS
-============================================================
-
-   برای اضافه کردن تریلر جدید:
-
-   {
-       title: "نام بازی",
-       description: "توضیحات",
-       url: "LINK"
-   }
-
-   لینک مستقیم embed آپارات را اینجا قرار بده.
-
 ============================================================ */
 
 const trailers = [
 
     {
-        title:
-            "تریلر بازی Star_Loom",
+        fa: {
+            title:
+                "تریلر بازی Star_Loom",
 
-        description:
-            "تریلرهای رسمی بازی‌های Star_Loom را از این قسمت دنبال کنید.",
+            description:
+                "تریلرهای رسمی بازی‌های Star_Loom را از این قسمت دنبال کنید.",
+
+            soon:
+                "تریلر به‌زودی منتشر می‌شود",
+
+            watch:
+                "🎬 مشاهده ویدیو"
+        },
+
+        en: {
+            title:
+                "Star_Loom Game Trailer",
+
+            description:
+                "Follow the official Star_Loom game trailers here.",
+
+            soon:
+                "The trailer will be released soon",
+
+            watch:
+                "🎬 Watch Video"
+        },
 
         url:
             ""
@@ -3391,17 +4600,40 @@ const trailers = [
 
 
     {
-        title:
-            "پروژه‌های آینده",
+        fa: {
+            title:
+                "پروژه‌های آینده",
 
-        description:
-            "تریلر پروژه‌های آینده Star_Loom به‌زودی در این قسمت قرار می‌گیرد.",
+            description:
+                "تریلر پروژه‌های آینده Star_Loom به‌زودی در این قسمت قرار می‌گیرد.",
+
+            soon:
+                "تریلر به‌زودی منتشر می‌شود",
+
+            watch:
+                "🎬 مشاهده ویدیو"
+        },
+
+        en: {
+            title:
+                "Upcoming Projects",
+
+            description:
+                "Trailers for upcoming Star_Loom projects will be added here soon.",
+
+            soon:
+                "The trailer will be released soon",
+
+            watch:
+                "🎬 Watch Video"
+        },
 
         url:
             ""
     }
 
 ];
+
 
 
 /* ============================================================
@@ -3419,6 +4651,12 @@ function renderTrailers() {
     container.innerHTML =
         trailers.map(item => {
 
+            const data =
+                currentLanguage === 'fa'
+                    ? item.fa
+                    : item.en;
+
+
             let video;
 
 
@@ -3429,7 +4667,7 @@ function renderTrailers() {
                     <iframe
                         class="trailer-video"
                         src="${item.url}"
-                        title="${item.title}"
+                        title="${data.title}"
                         allowfullscreen>
                     </iframe>
 
@@ -3446,7 +4684,7 @@ function renderTrailers() {
                         🎬
 
                         <span>
-                            تریلر به‌زودی منتشر می‌شود
+                            ${data.soon}
                         </span>
 
                     </div>
@@ -3465,11 +4703,11 @@ function renderTrailers() {
                     <div class="trailer-info">
 
                         <h3>
-                            ${item.title}
+                            ${data.title}
                         </h3>
 
                         <p>
-                            ${item.description}
+                            ${data.description}
                         </p>
 
                         ${
@@ -3482,7 +4720,7 @@ function renderTrailers() {
                                 rel="noopener"
                                 class="btn btn-secondary">
 
-                                🎬 مشاهده ویدیو
+                                ${data.watch}
 
                             </a>
                             `
@@ -3500,8 +4738,6 @@ function renderTrailers() {
 
 }
 
-
-renderTrailers();
 
 
 /* ============================================================
@@ -3526,6 +4762,7 @@ window.addEventListener(
 
     }
 );
+
 
 
 /* ============================================================
@@ -3554,6 +4791,7 @@ window.addEventListener(
 );
 
 
+
 /* ============================================================
    INIT
 ============================================================ */
@@ -3575,11 +4813,6 @@ document.addEventListener(
         applyTheme(saved);
 
 
-        /*
-         * اگر کاربر قبلاً وارد شده،
-         * تم حسابش را اعمال کن.
-         */
-
         if (
             currentUser &&
             currentUser.theme
@@ -3590,6 +4823,13 @@ document.addEventListener(
             );
 
         }
+
+
+        changeLanguage(
+            localStorage.getItem(
+                'starLoomLanguage'
+            ) || 'fa'
+        );
 
     }
 );
